@@ -8,7 +8,9 @@
 
 Escolhemos o tema X para o projeto, por ser um assunto bem relevante na área da saúde
 e diversificado. Assim é possível realizar uma proposta diversificada, além de facilitar
-a busca de dados de modelos variados.
+a busca de dados de modelos variados. Esse tema por ser relativamente atual também possui 
+uma vasta quantidade de dados inexplorados na internet que podem ser relacionados e moldados 
+com certa facilidade.
 
 ## Interligação e análise dos dados  
 (quais são as análises a ser realizadas, quais os resultados esperados e qual o papel de
@@ -26,8 +28,8 @@ um nível de confiabilidade razoável. Além disso, os dados pr
 ## Bases de Dados
 Encontramos algumas bases de dados que podem ser utilizadas: </br>
 -https://www.kaggle.com/dryad/ae-aegypti-and-ae-albopictus-occurrences</br>
--link2</br>
--link3</br>
+-https://www.kaggle.com/ramirobentes/flights-in-brazil
+-https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities
 
 
 ## Metodologia
