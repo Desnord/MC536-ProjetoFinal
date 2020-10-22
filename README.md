@@ -4,8 +4,9 @@
 <div align="center"> Pedro Jun Novais - 204878 </div>
 
 ## Introdução
-(descrição do tema do projeto, incluindo motivação e contexto gerador)</br>
-Tema
+Escolhemos o tema X para o projeto, por ser um assunto bem relevante na área da saúde
+e diversificado. Assim é possível realizar uma proposta diversificada, além de facilitar
+a busca de dados de modelos variados.
 
 Motivação e contexto
 
@@ -27,6 +28,9 @@ As bases de dados escolhidas foram retiradas das seguintes fontes:</br>
 
 
 ## Metodologia
+
+Para realizar a predição, iremos treinar um modelo de Machine Learning com os 
+dados de casos da doença
 
 proposta de metodologia incluindo o que se pretende analisar e como será feita a
 análise
