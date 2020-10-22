@@ -4,6 +4,8 @@
 <div align="center"> Pedro Jun Novais - 204878 </div>
 
 ## Introdução
+(descrição do tema do projeto, incluindo motivação e contexto gerado)
+
 Escolhemos o tema X para o projeto, por ser um assunto bem relevante na área da saúde
 e diversificado. Assim é possível realizar uma proposta diversificada, além de facilitar
 a busca de dados de modelos variados.
@@ -12,23 +14,28 @@ a busca de dados de modelos variados.
 (quais são as análises a ser realizadas, quais os resultados esperados e qual o papel de
 cada modelo lógico no processo)
 
-Os dados serão interligados da seguinte maneira:
+A pior parte do projeto está na interligação dos dados, já que originalmente não possuem
+relações entre si. Assim, primeiro os dados serão convertidos para um único modelo lógico, 
+na forma tabular. Esses dados tabulares serão preparados no Orange, e depois exportados
+em csv. Com os arquivos .csv obtidos, realizaremos algumas análises em um programa em python.
 
 ## Resultados esperados
+Esperamos encontrar um modelo de predição do diagnóstico da doença, tal que apresente
+um nível de confiabilidade razoável. Além disso, os dados pr
 
 ## Bases de Dados
-(elencar as bases de dados candidatas a serem utilizadas no projeto)</br>
 As bases de dados escolhidas foram retiradas das seguintes fontes:</br>
-
--link1
--link2
--link3
+-link1</br>
+-link2</br>
+-link3</br>
 
 
 ## Metodologia
 
 Para realizar a predição, iremos treinar um modelo de Machine Learning com os 
-dados de casos da doença
+dados de casos da doença. Assim, com os dados de um paciente qualquer, poderemos
+dizer se o mesmo possui a doença ou não. Entretanto, levando em consideração os erros
+associados ao modelo obtido. 
 
 proposta de metodologia incluindo o que se pretende analisar e como será feita a
 análise
