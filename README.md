@@ -8,8 +8,6 @@ Escolhemos o tema X para o projeto, por ser um assunto bem relevante na área da
 e diversificado. Assim é possível realizar uma proposta diversificada, além de facilitar
 a busca de dados de modelos variados.
 
-Motivação e contexto
-
 ## Interligação e análise dos dados  
 (quais são as análises a ser realizadas, quais os resultados esperados e qual o papel de
 cada modelo lógico no processo)
