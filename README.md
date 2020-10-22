@@ -1,4 +1,4 @@
-# ProjetoFinalMC536 - Projeto final da disciplina de Banco de Dados (MC536)
+# ProjetoFinalMC536 - Projeto final da disciplina de Banco de Dados
 
 ## Introdução
 descrição do tema do projeto, incluindo motivação e contexto gerador
