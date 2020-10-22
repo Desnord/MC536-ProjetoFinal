@@ -1,6 +1,5 @@
 # ProjetoFinalMC536 - Projeto final da disciplina de Banco de Dados
-### Grupo:
-<div align="center"> ### Grupo: </div>
+<div align="center"><h3> Grupo: </h3></div>
 <div align="center"> Thomas Gomes Ferreira - 224919 </div>
 <div align="center"> Pedro Jun Novais - 204878 </div>
 
