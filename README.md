@@ -24,8 +24,8 @@ Esperamos encontrar um modelo de predição do diagnóstico da doença, tal que 
 um nível de confiabilidade razoável. Além disso, os dados pr
 
 ## Bases de Dados
-As bases de dados escolhidas foram retiradas das seguintes fontes:</br>
--link1</br>
+Encontramos algumas bases de dados que podem ser utilizadas: </br>
+-https://www.kaggle.com/dryad/ae-aegypti-and-ae-albopictus-occurrences</br>
 -link2</br>
 -link3</br>
 
