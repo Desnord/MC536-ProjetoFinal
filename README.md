@@ -30,8 +30,5 @@ Encontramos algumas bases de dados que podem ser utilizadas: </br>
 -https://www.who.int/influenza/gisrs_laboratory/flunet/en/</br>
 
 ## Metodologia
+Para realizar a predição, iremos treinar um modelo de Machine Learning com os dados relacionados resultantes da análise realizada. A princípio, vamos tentar utilizar apenas um modelo simples de regressão, levando em consideração os erros relacionados ao modelo.
 
-Para realizar a predição, iremos treinar um modelo de Machine Learning com os 
-dados de casos da doença. Assim, com os dados de um paciente qualquer, poderemos
-dizer se o mesmo possui a doença ou não. Entretanto, levando em consideração os erros
-associados ao modelo obtido. 
