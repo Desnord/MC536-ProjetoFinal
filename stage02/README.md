@@ -16,6 +16,12 @@ Assim, nossa motivação principal é a possibilidade de prever os casos de grip
 > Quais são as análises a ser realizadas, quais os resultados esperados e qual o papel de cada modelo lógico no processo. Proposta de metodologia incluindo o que se pretende analisar e como será feita a análise.
 
 ## Bases de Dados
+> Algumas bases de dados candidatas à serem utilizadas no projeto:
+
 título da base | link | breve descrição
 ----- | ----- | -----
-`<título da base>` | `<link para a página da base>` | `<breve descrição da base>`
+`<título da base>` | `https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities` | `<breve descrição da base>`
+`<título da base>` | `https://www.fludb.org/brc/vaccineRecommend.spg?decorator=influenza` | `<breve descrição da base>`
+`<título da base>` | `https://www.kaggle.com/ramirobentes/flights-in-brazil` | `<breve descrição da base>`
+`<título da base>` | `https://www.paho.org/hq/index.php?option=com_topics&view=rdmore&cid=4302&item=influenza&type=statistics&Itemid=40753&lang=em` | `<breve descrição da base>`
+`<título da base>` | `https://www.who.int/influenza/gisrs_laboratory/flunet/en/` | `<breve descrição da base>`
