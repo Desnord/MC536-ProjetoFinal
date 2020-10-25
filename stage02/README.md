@@ -13,7 +13,6 @@ Assim, nossa motivação principal é a possibilidade de prever os casos de grip
 
 ## Método
 
-> Quais são as análises a ser realizadas, quais os resultados esperados e qual o papel de cada modelo lógico no processo.
 >As principais análises que serão feitas, envolvem a predições relacionadas a gripe, como o número de casos esperados em determinado páis, como esses casos estão distribuidos pelo país e como esse vírus se espalham geograficamente, por isso as bases de dados escolhidas estão relacionadas com a movimentação de pessoas pelo território do Brasil, como o histórico de temperatura do Brasil nos últimos anos, pois isso afeta diretamente como a gripe se espalha e interfere diretamente na vida útil dos virús, e por fim as bases de dados que juntam dados do histórico de atuação do virús influenza, podem nos auxiliar a dar predições.
 As predições serão realizadas, utilizando um modelo de Machine Learning com os dados relacionados resultantes da análise, para isso utilizaremos um modelo simples de regressão, levando em consideração os erros relacionados ao modelo.
 
