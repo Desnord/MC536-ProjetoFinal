@@ -21,8 +21,8 @@ Assim, nossa motivação principal é a possibilidade de prever os casos de grip
 
 título da base | link | breve descrição
 ----- | ----- | -----
-`<título da base>` | `https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities` | `<breve descrição da base>`
-`<título da base>` | `https://www.fludb.org/brc/vaccineRecommend.spg?decorator=influenza` | `<breve descrição da base>`
-`<título da base>` | `https://www.kaggle.com/ramirobentes/flights-in-brazil` | `<breve descrição da base>`
-`<título da base>` | `https://www.paho.org/hq/index.php?option=com_topics&view=rdmore&cid=4302&item=influenza&type=statistics&Itemid=40753&lang=em` | `<breve descrição da base>`
-`<título da base>` | `https://www.who.int/influenza/gisrs_laboratory/flunet/en/` | `<breve descrição da base>`
+`temperatura de cidades brasileiras` | `https://www.kaggle.com/volpatto/temperature-timeseries-for-some-brazilian-cities` | `temperaturas de cidades brasileiras ao longo do ano, durante alguns anos`
+`recomendação de vacinas influenza` | `https://www.fludb.org/brc/vaccineRecommend.spg?decorator=influenza` | `recomendações para o desenvolvimento de vacinas de gripe`
+`voos no brazil` | `https://www.kaggle.com/ramirobentes/flights-in-brazil` | `dataset com todos os voos que do espaço aéreo brasileiro de alguns anos`
+`reports semanais paho` | `https://www.paho.org/hq/index.php?option=com_topics&view=rdmore&cid=4302&item=influenza&type=statistics&Itemid=40753&lang=em` | `relatórios semanais sobre dados da gripe de diversos países`
+`who dados sobre a gripe` | `https://www.who.int/influenza/gisrs_laboratory/flunet/en/` | `dados relacionados a gripe da organização mundial da saúde`
