@@ -36,3 +36,4 @@ https://github.com/santanche/lab2learn/blob/master/templates/project.md.
 ● primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder;
 ● primeiro conjunto de queries no Jupyter Notebook via Binder;
 ● arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
+Se não for possível executar no Jupyter/Binder a equipe deve apresentar justificativa pertinente.
