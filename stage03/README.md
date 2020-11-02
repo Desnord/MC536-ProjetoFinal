@@ -35,9 +35,10 @@ análise.
 # Entrega
 Deve ser disponibilizada no Github da equipe, conforme template disponibilizado em: 
 https://github.com/santanche/lab2learn/blob/master/templates/project.md. É importante ressaltar que o documento da Fase 3 deve incluir os campos da Fase 2 (revisados, se necessário). Além disso, deverá constar:
-● primeiro modelo conceitual do projeto
-● modelos lógicos dos bancos de dados relacionados aos modelos conceituais;
-● primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder;
-● primeiro conjunto de queries no Jupyter Notebook via Binder;
-● arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
+- primeiro modelo conceitual do projeto
+- modelos lógicos dos bancos de dados relacionados aos modelos conceituais;
+- primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder;
+- primeiro conjunto de queries no Jupyter Notebook via Binder;
+- arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
+
 Se não for possível executar no Jupyter/Binder a equipe deve apresentar justificativa pertinente.
