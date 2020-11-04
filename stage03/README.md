@@ -12,7 +12,7 @@ Assim, nossa motivação principal é a possibilidade de prever os casos de grip
 >Também serão exibidos algumas informações visuais com os dados do SGBD.
 
 ## Bases de Dados
-> Algumas bases de dados candidatas à serem utilizadas no projeto:
+> Bases de dados utilizadas no projeto:
 
 título da base | link | breve descrição
 ----- | ----- | -----
