@@ -19,22 +19,22 @@ título da base | link | breve descrição
 `voos no brazil` | `https://www.kaggle.com/ramirobentes/flights-in-brazil` | `dataset com todos os voos que do espaço aéreo brasileiro de alguns anos`
 
 
-# f1 - primeiro modelo conceitual do projeto;
+## f1 - primeiro modelo conceitual do projeto;
 Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
 
-# f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais;
+## f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais;
 Imagem dos modelo lógico, obtido a partir do modelo conceitual.
 
-# f3 - primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder;
+## f3 - primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder;
 Notebook contendo os códigos em Python, utilizados para gerar as queries
 
-# f4 - primeiro conjunto de queries no Jupyter Notebook via Binder;
+## f4 - primeiro conjunto de queries no Jupyter Notebook via Binder;
 Notebook contendo as queries SQL.
 
-# f5 - arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook;
+## f5 - arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook;
 Arquivos csv utilizados para criação do SGBD.
 
-# f6 - arquivos extras;
+## f6 - arquivos extras;
 Arquivos que não se encaixam em nenhuma das opções acima, e que foram utilizados no projeto.
 
 # --
