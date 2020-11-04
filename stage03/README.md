@@ -27,8 +27,8 @@ Novamente, com um script em python, geramos um arquivo sql com os comandos de in
 
 título da base | link | breve descrição
 ----- | ----- | -----
-`voos no brazil` | `https://www.kaggle.com/ramirobentes/flights-in-brazil` | `dataset com todos os voos que do espaço aéreo brasileiro de alguns anos`
-
+`voos no brasil` | `https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos` | `datasets com voos no brasil, por ano e mês`
+`infogripe` | `http://info.gripe.fiocruz.br` | `sistema de casos de gripe no brasil`
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
