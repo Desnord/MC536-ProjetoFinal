@@ -9,7 +9,7 @@ Assim, nossa motivação principal é a possibilidade de prever os casos de grip
 ## Método
 >Foram escolhidos algumas fontes de dados, que estão no tópico seguinte. Essas bases foram trabalhadas a fim de montar um banco de dados em SQL.
 
-### Para a fonte dos voos no Brasil, baixamos o csv e atráves do Orange, foram obtidos dois arquivos csv:
+### Para a fonte dos voos no Brasil, baixamos o csv e atráves do Orange, foram obtidos outros dois arquivos csv:
 - cidade.csv </br>
 Esse arquivo trás uma lista com tuplas de cidades, com seu nome, estado, longitude e latitude. Porém há cidades repetidas.
 Através de um script em python, removemos as cidades repetidas e geramos um arquivo sql com os comandos de inserção. 
