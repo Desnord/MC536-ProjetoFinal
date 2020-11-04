@@ -19,26 +19,26 @@ título da base | link | breve descrição
 `voos no brazil` | `https://www.kaggle.com/ramirobentes/flights-in-brazil` | `dataset com todos os voos que do espaço aéreo brasileiro de alguns anos`
 
 
-## f1 - primeiro modelo conceitual do projeto;
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1
+## f1 - primeiro modelo conceitual do projeto
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
 Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
 
-## f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais;
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f2
+## f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f2 </br>
 Imagem dos modelo lógico, obtido a partir do modelo conceitual.
 
-## f3 - primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder;
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3
+## f3 - primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3 </br>
 Notebook contendo os códigos em Python, utilizados para gerar as queries
 
-## f4 - primeiro conjunto de queries no Jupyter Notebook via Binder;
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4
+## f4 - primeiro conjunto de queries no Jupyter Notebook via Binder
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4 </br>
 Notebook contendo as queries SQL.
 
-## f5 - arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook;
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f5
+## f5 - arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f5 </br>
 Arquivos csv utilizados para criação do SGBD.
 
-## f6 - arquivos extras;
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f6
+## f6 - arquivos extras
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f6 </br>
 Arquivos que não se encaixam em nenhuma das opções acima, e que foram utilizados no projeto.
