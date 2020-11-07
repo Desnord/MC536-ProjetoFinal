@@ -25,6 +25,7 @@ título da base | link | breve descrição
 `infogripe` | `http://info.gripe.fiocruz.br` | `sistema de casos de gripe no brasil`
 </br>
 
+## Obtendo arquivos para gerar o SGBD
 ### Fonte de dados de Voos no Brasil
 Incialmente, baixamos as tabelas csv, no período de 2010 à 2019. Como as tabelas não seguiam o mesmo padrão, elas foram padronizadas individualmente,
 apenas utilizando recursos do editor de texto. Desse modo, foram obtidos os arquivos csv base, para serem trabalhados e transformados em tabelas. Como o github 
@@ -46,6 +47,13 @@ https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sha
 ### Fonte de dados Climáticos no Brasil
 
 ### Fonte de casos de Gripe no Brasil
+
+
+## Obtendo o SGBD
+### Criando Tabelas
+O código de criação de tabelas foi criado em um arquivo SQL, que pode ser encontrado à seguir:
+
+Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f3.
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
