@@ -44,10 +44,13 @@ https://drive.google.com/drive/folders/1mDot2bxqHiSGIHXnkX2PU5qSwm4ZT8p1?usp=sha
 E os arquivos do orange:</br>
 https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sharing</br>
 
-### Fonte de dados Climáticos no Brasil
-
 ### Fonte de casos de Gripe no Brasil
-
+Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
+Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
+o csv do repositório deles, que pode ser encontrado no link a seguir:
+https://github.com/belisards/srag_brasil
+O arquivo que utilizamos foi o casos_uf.csv. Esse arquivo foi preparado no Orange, a fim de tirar as colunas desnecessárias e remover os dados de 2009.
+Como resultado, obtivemos o arquivo casos01.csv, que pode ser encontrado na pasta f5.
 
 ## Obtendo o SGBD
 ### Criando Tabelas
@@ -55,11 +58,16 @@ O código de criação de tabelas e dos inserts da tabela Estado, pode ser encon
 Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f4.
 
 ### Voos no Brasil
+- nao completei ainda *lembrete
 Novamente, estava sendo um problema abrir os csvs do drive no Jupyter/Binder, e optamos por um script python
 local. Com esse script, geramos as queries de inserção das tabelas Cidade, Aeroporto, Voo.
 O script pode ser encontrado na pasta f3, e as queries no link a seguir: </br>
 https://drive.google.com/drive/folders/1dftiDz8xAE1ZivCEEf-pwyeDkrYo43Xf?usp=sharing </br>
 
+### Casos
+- nao completei ainda *lembrete
+Para este, não há problemas em utilizar o jupyter, assim criamos o notebook XXX, que se encontra na pasta fX.
+Com ele, abrimos o csv e geramos a query de inserção dos casos por estado, semana e ano.
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
