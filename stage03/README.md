@@ -52,7 +52,6 @@ https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sha
 ## Obtendo o SGBD
 ### Criando Tabelas
 O código de criação de tabelas e dos inserts da tabela Estado, pode ser encontrado na pasta f6.
-
 Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f4.
 
 ### Voos no Brasil
