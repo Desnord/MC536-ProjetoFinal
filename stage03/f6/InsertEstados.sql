@@ -1,0 +1,28 @@
+Insert Into Estado (UF,Nome) Values('AC','Acre');  
+Insert Into Estado (UF,Nome) Values('AL','Alagoas');  
+Insert Into Estado (UF,Nome) Values('AM','Amazonas');
+Insert Into Estado (UF,Nome) Values('AP','Amapá');
+Insert Into Estado (UF,Nome) Values('BA','Bahia');
+Insert Into Estado (UF,Nome) Values('CE','Ceará');
+Insert Into Estado (UF,Nome) Values('DF','Distrito Federal');
+Insert Into Estado (UF,Nome) Values('ES','Espírito Santo');
+Insert Into Estado (UF,Nome) Values('GO','Goiás');
+Insert Into Estado (UF,Nome) Values('MA','Maranhão');
+Insert Into Estado (UF,Nome) Values('MG','Minas Gerais');
+Insert Into Estado (UF,Nome) Values('MS','Mato Grosso do Sul');
+Insert Into Estado (UF,Nome) Values('MT','Mato Grosso');
+Insert Into Estado (UF,Nome) Values('PA','Pará');
+Insert Into Estado (UF,Nome) Values('PB','Paraíba');
+Insert Into Estado (UF,Nome) Values('PE','Pernambuco');
+Insert Into Estado (UF,Nome) Values('PI','Piauí');
+Insert Into Estado (UF,Nome) Values('PR','Paraná');
+Insert Into Estado (UF,Nome) Values('RJ','Rio de Janeiro');
+Insert Into Estado (UF,Nome) Values('RN','Rio Grande do Norte');
+Insert Into Estado (UF,Nome) Values('RO','Rondônia');
+Insert Into Estado (UF,Nome) Values('RR','Roraima');
+Insert Into Estado (UF,Nome) Values('RS','Rio Grande do Sul');
+Insert Into Estado (UF,Nome) Values('SC','Santa Catarina');
+Insert Into Estado (UF,Nome) Values('SE','Sergipe');
+Insert Into Estado (UF,Nome) Values('SP','São Paulo');
+Insert Into Estado (UF,Nome) Values('TO','Tocantins');
+	
