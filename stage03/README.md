@@ -51,9 +51,15 @@ https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sha
 
 ## Obtendo o SGBD
 ### Criando Tabelas
-O código de criação de tabelas foi criado em um arquivo SQL, que pode ser encontrado à seguir:
+O código de criação de tabelas e dos inserts da tabela Estado, pode ser encontrado na pasta f6.
 
-Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f3.
+Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f4.
+
+### Voos no Brasil
+Novamente, estava sendo um problema abrir os csvs do drive no Jupyter/Binder, e optamos por um script python
+local. Com esse script, geramos as queries de inserção das tabelas Cidade, Aeroporto, Voo.
+O script pode ser encontrado na pasta f3, e as queries no link a seguir:
+
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
