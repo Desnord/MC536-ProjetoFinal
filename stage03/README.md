@@ -24,6 +24,24 @@ título da base | link | breve descrição
 `voos no brasil` | `https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos` | `datasets com voos no brasil, por ano e mês`
 `infogripe` | `http://info.gripe.fiocruz.br` | `sistema de casos de gripe no brasil`
 
+### Fonte de dados de Voos no Brasil
+Incialmente, baixamos as tabelas csv, no período de 2010 à 2019. Como as tabelas não seguiam o mesmo padrão, elas foram padronizadas individualmente,
+apenas utilizando recursos do editor de texto. Desse modo, foram obtidos os arquivos csv base, para serem trabalhados e transformados em tabelas. Como o github 
+não aceita arquivos muito grandes, estes arquivos podem ser encontrados no drive a seguir:
+https://drive.google.com/drive/folders/1_iJDpGbzD3YcEj_K5Iffd7mADJ_9193I?usp=sharing
+
+Inicialmente, como eram muitas tabelas, 12 por ano, utilizamos um script para juntar as tabelas de mesmo ano. Não utilizamos o Jupyter/Binder para essa etapa, pois estavamos encontrando muitos problemas de execução, e dificuldade para abrir e processar as tabelas. Para não perder tempo resolvendo tais contratempos, e como os arquivos eram apenas intermediários, executamos diretamente na máquina. Os arquivos obtidos podem ser encontrados à seguir:
+https://drive.google.com/drive/folders/1lkjfuRiZ9Ll7kzrC311Hh_MCL_bJJ5sP?usp=sharing
+
+Em seguida, esses dados foram trabalhados a primeira vez no Orange, a fim de facilitar o processo de separação dos dados. Com ele, obtemos os arquivos csv que podem 
+ser encontrados no endereço a seguir (estes csvs que serão utilizados para criar as tabelas de Cidade, Voo e Aeroporto):
+https://drive.google.com/drive/folders/1mDot2bxqHiSGIHXnkX2PU5qSwm4ZT8p1?usp=sharing
+
+E os arquivos do orange:
+https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sharing
+
+
+
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
 Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
