@@ -47,10 +47,10 @@ https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sha
 ### Fonte de casos de Gripe no Brasil
 Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
 Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
-o csv do repositório deles, que pode ser encontrado no link a seguir:
-https://github.com/belisards/srag_brasil
+o csv do repositório deles, que pode ser encontrado no link a seguir:</br>
+https://github.com/belisards/srag_brasil </br>
 O arquivo que utilizamos foi o casos_uf.csv. Esse arquivo foi preparado no Orange, a fim de tirar as colunas desnecessárias e remover os dados de 2009.
-Como resultado, obtivemos o arquivo casos01.csv, que pode ser encontrado na pasta f5.
+Como resultado, obtivemos o arquivo casos01.csv, que pode ser encontrado na pasta f5, e o arquivo do Orange na pasta f6.
 
 ## Obtendo o SGBD
 ### Criando Tabelas
