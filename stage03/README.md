@@ -58,7 +58,6 @@ O código de criação de tabelas e dos inserts da tabela Estado, pode ser encon
 Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f4.
 
 ### Voos no Brasil
-- nao completei ainda *lembrete
 Novamente, estava sendo um problema abrir os csvs do drive no Jupyter/Binder, e optamos por um script python
 local. Com esse script, geramos as queries de inserção das tabelas Cidade, Aeroporto, Voo.
 O script pode ser encontrado na pasta f3, e as queries no link a seguir: </br>
