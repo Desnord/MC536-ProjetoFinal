@@ -8,9 +8,13 @@ Assim, nossa motivação principal é a possibilidade de prever os casos de grip
 
 ## Método
 >Foram escolhidos algumas fontes de dados, que estão no tópico seguinte. Essas bases foram trabalhadas a fim de montar um banco de dados em SQL.
->As principais análises que serão feitas, envolvem predições relacionadas a gripe, como o número de casos esperados em determinada cidade, como esses casos estão distribuidos pelo país e como esse vírus se espalha geograficamente, por isso as bases de dados escolhidas estão relacionadas com o histórico de atuação desse vírus no Brasil, o que pode nos auxiliar a fazer predições, com a movimentação de pessoas pelo território nacional e como o histórico de temperatura do Brasil nos últimos anos, pois isso afeta diretamente como a gripe se espalha e também interfere na vida útil dos virús.
+>Iremos realizar algumas análises:
+- predições relacionadas a gripe, como o número de casos esperados em determinado estado; 
+- como esses casos estão distribuidos pelo país e como esse vírus se espalha geograficamente;
+
+Por isso as bases de dados escolhidas estão relacionadas com o histórico de atuação desse vírus no Brasil, o que pode nos auxiliar a fazer predições, com a movimentação de pessoas pelo território nacional e como o histórico de temperatura do Brasil nos últimos anos, pois isso afeta diretamente como a gripe se espalha e também interfere na vida útil dos virús.
 >As predições serão realizadas, utilizando Machine Learning, com os dados relacionados resultantes da análise, para isso utilizaremos um modelo simples de regressão, levando em consideração os erros relacionados ao modelo.
->Também serão exibidos algumas informações visuais com os dados do SGBD.
+>Também serão exibidos algumas informações visuais com os dados do SGBD, a fim de exibir como o vírus se espalha geograficamente.
 
 ## Bases de Dados
 > Bases de dados utilizadas no projeto:
