@@ -64,9 +64,9 @@ O script pode ser encontrado na pasta f3, e as queries no link a seguir: </br>
 https://drive.google.com/drive/folders/1dftiDz8xAE1ZivCEEf-pwyeDkrYo43Xf?usp=sharing </br>
 
 ### Casos
-- nao completei ainda *lembrete
-Para este, não há problemas em utilizar o jupyter, assim criamos o notebook XXX, que se encontra na pasta fX.
-Com ele, abrimos o csv e geramos a query de inserção dos casos por estado, semana e ano.
+O script de geração dos inserts, casosInsert.py, pode ser encontrado na pasta f3.
+Com ele, abrimos o csv e geramos o sql de inserção dos casos por estado, semana e ano. Esse arquivo sql 
+se encontra na pasta f6.
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
@@ -76,9 +76,9 @@ Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f2 </br>
 Imagem de esquema do modelo lógico, relacionado ao modelo conceitual, e a query de criação das tabelas.
 
-## f3 - primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder
+## f3 - primeiro programa de extração e conversão de dados <s>no Jupyter Notebook via Binder</s>
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3 </br>
-Notebook contendo os códigos em Python, utilizados para gerar as queries.
+Códigos python utilizados para gerar as queries.
 
 ## f4 - primeiro conjunto de queries no Jupyter Notebook via Binder
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4 </br>
