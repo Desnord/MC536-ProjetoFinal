@@ -30,11 +30,11 @@ Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
 
 ## f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f2 </br>
-Imagem dos modelo lógico, obtido a partir do modelo conceitual.
+Imagem do modelo lógico relacionado ao modelo conceitual, e a query de criação das tabela.
 
 ## f3 - primeiro programa de extração e conversão de dados no Jupyter Notebook via Binder
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3 </br>
-Notebook contendo os códigos em Python, utilizados para gerar as queries
+Notebook contendo os códigos em Python, utilizados para gerar as queries.
 
 ## f4 - primeiro conjunto de queries no Jupyter Notebook via Binder
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4 </br>
