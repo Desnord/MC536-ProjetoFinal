@@ -6,5 +6,3 @@ Como alguns csvs são muito grandes para serem colocados no GitHub, colocamos to
 
 ### Casos
 - casos01.csv
-
-### Clima
