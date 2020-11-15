@@ -29,46 +29,44 @@ título da base | link | breve descrição
 ### Fonte de dados de Voos no Brasil
 Incialmente, baixamos as tabelas csv, no período de 2010 à 2019. Como as tabelas não seguiam o mesmo padrão, elas foram padronizadas individualmente,
 apenas utilizando recursos do editor de texto. Desse modo, foram obtidos os arquivos csv base, para serem trabalhados e transformados em tabelas. Como o github 
-não aceita arquivos muito grandes, estes arquivos podem ser encontrados no drive a seguir:</br>
-https://drive.google.com/drive/folders/1_iJDpGbzD3YcEj_K5Iffd7mADJ_9193I?usp=sharing</br>
+não aceita arquivos muito grandes, tivemos de colocar no google drive. Os arquivos bases podem ser encontrados na pasta 01-BASE-VOOS. </br>
 
-Inicialmente, como eram muitas tabelas, 12 por ano, utilizamos um script para juntar as tabelas de mesmo ano. Não utilizamos o Jupyter/Binder para essa etapa, pois estavamos encontrando muitos problemas de execução, e dificuldade para abrir e processar as tabelas. Para não perder tempo resolvendo tais contratempos, e como os arquivos eram apenas intermediários, executamos diretamente na máquina. Os arquivos obtidos podem ser encontrados à seguir:</br>
-https://drive.google.com/drive/folders/1lkjfuRiZ9Ll7kzrC311Hh_MCL_bJJ5sP?usp=sharing</br>
-
-O script dessa parte pode ser encontrado na pasta f3, com o nome de voosTotais.py </br>
+Em seguida, como eram muitas tabelas, 12 por ano, utilizamos um script para juntar as tabelas de mesmo ano. Não utilizamos o Jupyter/Binder para essa etapa, pois estavamos encontrando muitos problemas de execução, e dificuldade para abrir e processar as tabelas. Para não perder tempo resolvendo tais contratempos, e como os arquivos eram apenas intermediários, executamos diretamente na máquina. O script e os arquivos obtidos podem ser encontrados na pasta 02-PYTHON-VOOS-TOTAIS.</br>
 
 Em seguida, esses dados foram trabalhados a primeira vez no Orange, a fim de facilitar o processo de separação dos dados. Com ele, obtemos os arquivos csv que podem 
-ser encontrados no endereço a seguir (estes csvs que serão utilizados para criar as tabelas de Cidade, Voo e Aeroporto):</br>
-https://drive.google.com/drive/folders/1mDot2bxqHiSGIHXnkX2PU5qSwm4ZT8p1?usp=sharing</br>
+ser encontrados na pasta 03-ORANGE-VOOS (os arquivos do orange também estão nessa pasta).
 
-E os arquivos do orange:</br>
-https://drive.google.com/drive/folders/1BE1LcNpOIQGIuQQx1pj6wcWrxM1u00sS?usp=sharing</br>
+Por fim, utilizamos um script python parar terminar de processar as tabelas csv. Com esses csvs, já temos os dados de inserção do banco. As tabelas e o script para isso
+pode ser encontrado na pasta 04-PYTHON GERAÇÃO DOS ULTIMOS CSVS. 
 
 ### Fonte de casos de Gripe no Brasil
 Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
 Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
 o csv do repositório deles, que pode ser encontrado no link a seguir:</br>
-https://github.com/belisards/srag_brasil </br>
-O arquivo que utilizamos foi o casos_uf.csv. Esse arquivo foi preparado no Orange, a fim de tirar as colunas desnecessárias e remover os dados de 2009.
-Como resultado, obtivemos o arquivo casos01.csv, que pode ser encontrado na pasta f5, e o arquivo do Orange na pasta f6.
+https://github.com/belisards/srag_brasil </br> 
+ou na pasta  - BASE CASOS. </br>
+
+O arquivo que utilizamos foi o casos_uf.csv. Em seguida, esse arquivo foi preparado no Orange, a fim de tirar as colunas desnecessárias e remover os dados de 2009.
+Como resultado, obtivemos o arquivo casos01.csv. O arquivo do orange e o csv, podem ser encontrados na pasta 2 - ORANGE CASOS.
+
+Por último, passamos o csv por um script python apenas para padronizar a tabela, e assim obter o csv final para inserir no banco. Esse script e a tabela final podem 
+ser encontrados na pasta 3 - PYTHON GERAÇÃO DO ULTIMO CSV.
 
 ## Obtendo o SGBD
-### Criando Tabelas
-O código de criação de todas as tabelas e dos inserts, podem ser encontrado na pasta f4.
+### Criando Tabelas 
+</br>
+Foram geradas 5 tabelas até o momento:
+- Estado
+- Cidade
+- Aeroporto
+- Voo
+- Casos
 
-### Voos no Brasil
-Novamente, estava sendo um problema abrir os csvs do drive no Jupyter/Binder, e optamos por um script python
-local. Com esse script, geramos as csvs de inserção das tabelas Cidade, Aeroporto, Voo. Em seguida, iremos 
-transformar essas csvs diretamente em um banco de dados.
+A query de criação das tabelas que vieram dos arquivos de voos, estão na raiz da pasta VOOS. Dessas tabelas, a tabela estado é a única que teve os inserts criados
+do zero, e a query para isso também se encontra na raiz. Os dados de inserção para as outras tabelas podem ser encontrados na pasta 05 - GERAÇÃO DE QUERIES DE INSERT.
 
-O script pode ser encontrado na pasta f3 pelo nome de tabelasCidVooAeroSQL.py, e as tabelas no link a seguir: </br>
-https://drive.google.com/drive/folders/1dftiDz8xAE1ZivCEEf-pwyeDkrYo43Xf?usp=sharing </br>
-
-### Casos
-Criamos o arquivo sql de inserção da tabela de casos, que pode ser encontrado na pasta f6.
-A tabela casos01.csv, foi transformada na tabela casosSQL.csv, com o script que pode ser encontrado na pasta f3
-pelo nome de tabelasCasosSQL.py. O csv final que será transformado em um banco de dados, pode ser encontrado
-na pasta f5.
+A query de criação da tabela de casos está na raiz da pasta CASOS. Os inserts dessa tabela foram gerados com um script python, tal que ambos podem ser encontrados
+na pasta 4 - GERAÇÃO DE QUERIES DE INSERT.
 
 ## Considerações futuras
 Não conseguimos inserir a tabela de clima a tempo, como encontramos uma quantidade de dados considerável para 
@@ -77,29 +75,5 @@ como ainda não encontramos uma fonte que possua estes dados, deixamos para impl
 obtivermos sucesso, tentaremos buscar outras fontes de dados que possam ser integradas.
 
 Em relação ao processo de transformar as fontes em um sgbd, achamos muito complicado juntar os dados todos, bem 
-como encontrar as fontes de maneira que poderiamos utilizar. Como houveram muitas etapas de processamento, acabou
-ficando bagunçado a descrição dos processos, mas no final conseguimos obter o arquivo sql com as queries desejadas.
-
-## f1 - primeiro modelo conceitual do projeto
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
-Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
-
-## f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f2 </br>
-Imagem de esquema do modelo lógico.
-
-## f3 - primeiro programa de extração e conversão de dados <s>no Jupyter Notebook via Binder</s>
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3 </br>
-Códigos python utilizados para gerar as queries.
-
-## f4 - primeiro conjunto de queries <s>no Jupyter Notebook via Binder</s>
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4 </br>
-queries SQL.
-
-## f5 - arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f5 </br>
-Arquivos csv utilizados para criação do SGBD.
-
-## f6 - arquivos extras
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f6 </br>
-Arquivos que não se encaixam em nenhuma das opções acima, e que foram utilizados no projeto.
+como encontrar as fontes de maneira que poderiamos utilizar. Também tivemos limitações com o uso do github, pelo tamanho dos arquivos,
+e com o uso de notebook. Entretanto, as queries foram geradas como desejado, apesar das dificuldades.
