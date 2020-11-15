@@ -59,8 +59,10 @@ Esse código também foi colocado no notebook que possui todas as queries, que s
 
 ### Voos no Brasil
 Novamente, estava sendo um problema abrir os csvs do drive no Jupyter/Binder, e optamos por um script python
-local. Com esse script, geramos as queries de inserção das tabelas Cidade, Aeroporto, Voo.
-O script pode ser encontrado na pasta f3, e as queries no link a seguir: </br>
+local. Com esse script, geramos as csvs de inserção das tabelas Cidade, Aeroporto, Voo. Em seguida, iremos 
+transformar essas csvs diretamente em um banco de dados.
+
+O script pode ser encontrado na pasta f3 pelo nome de tabelasCidVooAeroSQL.py, e as tabelas no link a seguir: </br>
 https://drive.google.com/drive/folders/1dftiDz8xAE1ZivCEEf-pwyeDkrYo43Xf?usp=sharing </br>
 
 ### Casos
