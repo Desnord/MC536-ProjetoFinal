@@ -70,6 +70,12 @@ do zero, e a query para isso também se encontra na raiz. Os dados de inserção
 A query de criação da tabela de casos está na raiz da pasta CASOS. Os inserts dessa tabela foram gerados com um script python, tal que ambos podem ser encontrados
 na pasta 4 - GERAÇÃO DE QUERIES DE INSERT.
 
+### Entidade Relacionamento
+O modelo entidade relacionamento foi criado com base na junção das fontes de dados trabalhadas até o momento, e o diagrama pode ser encontrado na raiz da pasta stage03.
+
+### Outras Queries
+Algumas queries que podem ser utilizadas para análise futura, foram criadas e colocadas na raiz da pasta stage03.
+
 ## Considerações futuras
 Não conseguimos inserir a tabela de clima a tempo, como encontramos uma quantidade de dados considerável para 
 os dados de casos e de voos, achamos melhor buscar uma fonte com dados de clima que seja mais completa. Entretanto,
