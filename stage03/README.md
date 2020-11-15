@@ -54,8 +54,7 @@ Como resultado, obtivemos o arquivo casos01.csv, que pode ser encontrado na past
 
 ## Obtendo o SGBD
 ### Criando Tabelas
-O código de criação de tabelas e dos inserts da tabela Estado, pode ser encontrado na pasta f6.
-Esse código também foi colocado no notebook que possui todas as queries, que se encontra na pasta f4.
+O código de criação de todas as tabelas e dos inserts, podem ser encontrado na pasta f4.
 
 ### Voos no Brasil
 Novamente, estava sendo um problema abrir os csvs do drive no Jupyter/Binder, e optamos por um script python
@@ -70,10 +69,6 @@ Criamos o arquivo sql de inserção da tabela de casos, que pode ser encontrado 
 A tabela casos01.csv, foi transformada na tabela casosSQL.csv, com o script que pode ser encontrado na pasta f3
 pelo nome de tabelasCasosSQL.py. O csv final que será transformado em um banco de dados, pode ser encontrado
 na pasta f5.
-
-## Queries
-O notebook que contem todas as queries pode ser encontrado na pasta f4. Como tivemos diversos problemas com o jupyter e o binder, 
-não conseguimos testar todas as queries geradas.
 
 ## Considerações futuras
 Não conseguimos inserir a tabela de clima a tempo, como encontramos uma quantidade de dados considerável para 
