@@ -71,19 +71,33 @@ A tabela casos01.csv, foi transformada na tabela casosSQL.csv, com o script que 
 pelo nome de tabelasCasosSQL.py. O csv final que será transformado em um banco de dados, pode ser encontrado
 na pasta f5.
 
+## Queries
+O notebook que contem todas as queries pode ser encontrado na pasta f4. Como tivemos problema com o jupyter e o binder,
+optamos por utilizar o google collab, pois neste é possível acessar conteúdo do drive sem complicações.
+
+## Considerações futuras
+Não conseguimos inserir a tabela de clima a tempo, como encontramos uma quantidade de dados considerável para 
+os dados de casos e de voos, achamos melhor buscar uma fonte com dados de clima que seja mais completa. Entretanto,
+como ainda não encontramos uma fonte que possua estes dados, deixamos para implementar na próxima etapa. Se não 
+obtivermos sucesso, tentaremos buscar outras fontes de dados que possam ser integradas.
+
+Em relação ao processo de transformar as fontes em um sgbd, achamos muito complicado juntar os dados todos, bem 
+como encontrar as fontes de maneira que poderiamos utilizar. Como houveram muitas etapas de processamento, acabou
+ficando bagunçado a descrição dos processos, mas no final conseguimos obter o notebook com as queries desejadas.
+
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
 Imagem com o primeiro diagrama Entidade Relacionamento do projeto.
 
 ## f2 - modelos lógicos dos bancos de dados relacionados aos modelos conceituais
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f2 </br>
-Imagem de esquema do modelo lógico, relacionado ao modelo conceitual, e a query de criação das tabelas.
+Imagem de esquema do modelo lógico.
 
 ## f3 - primeiro programa de extração e conversão de dados <s>no Jupyter Notebook via Binder</s>
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3 </br>
 Códigos python utilizados para gerar as queries.
 
-## f4 - primeiro conjunto de queries no Jupyter Notebook via Binder
+## f4 - primeiro conjunto de queries no <s>Jupyter Notebook via Binder</s> google collab
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4 </br>
 Notebook contendo as queries SQL.
 
