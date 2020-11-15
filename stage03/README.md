@@ -72,8 +72,8 @@ pelo nome de tabelasCasosSQL.py. O csv final que será transformado em um banco 
 na pasta f5.
 
 ## Queries
-O notebook que contem todas as queries pode ser encontrado na pasta f4. Como tivemos problema com o jupyter e o binder,
-optamos por utilizar o google collab, pois neste é possível acessar conteúdo do drive sem complicações.
+O notebook que contem todas as queries pode ser encontrado na pasta f4. Como tivemos diversos problemas com o jupyter e o binder, 
+não conseguimos testar todas as queries geradas.
 
 ## Considerações futuras
 Não conseguimos inserir a tabela de clima a tempo, como encontramos uma quantidade de dados considerável para 
@@ -83,7 +83,7 @@ obtivermos sucesso, tentaremos buscar outras fontes de dados que possam ser inte
 
 Em relação ao processo de transformar as fontes em um sgbd, achamos muito complicado juntar os dados todos, bem 
 como encontrar as fontes de maneira que poderiamos utilizar. Como houveram muitas etapas de processamento, acabou
-ficando bagunçado a descrição dos processos, mas no final conseguimos obter o notebook com as queries desejadas.
+ficando bagunçado a descrição dos processos, mas no final conseguimos obter o arquivo sql com as queries desejadas.
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
@@ -97,9 +97,9 @@ Imagem de esquema do modelo lógico.
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f3 </br>
 Códigos python utilizados para gerar as queries.
 
-## f4 - primeiro conjunto de queries no <s>Jupyter Notebook via Binder</s> google collab
+## f4 - primeiro conjunto de queries <s>no Jupyter Notebook via Binder</s>
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f4 </br>
-Notebook contendo as queries SQL.
+queries SQL.
 
 ## f5 - arquivos relacionais (usalmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f5 </br>
