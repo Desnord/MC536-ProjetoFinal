@@ -66,9 +66,10 @@ O script pode ser encontrado na pasta f3 pelo nome de tabelasCidVooAeroSQL.py, e
 https://drive.google.com/drive/folders/1dftiDz8xAE1ZivCEEf-pwyeDkrYo43Xf?usp=sharing </br>
 
 ### Casos
-O script de geração dos inserts, casosInsert.py, pode ser encontrado na pasta f3.
-Com ele, abrimos o csv e geramos o sql de inserção dos casos por estado, semana e ano. Esse arquivo sql 
-se encontra na pasta f6.
+Criamos o arquivo sql de inserção da tabela de casos, que pode ser encontrado na pasta f6.
+A tabela casos01.csv, foi transformada na tabela casosSQL.csv, com o script que pode ser encontrado na pasta f3
+pelo nome de tabelasCasosSQL.py. O csv final que será transformado em um banco de dados, pode ser encontrado
+na pasta f5.
 
 ## f1 - primeiro modelo conceitual do projeto
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage03/f1 </br>
