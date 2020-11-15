@@ -26,6 +26,9 @@ título da base | link | breve descrição
 </br>
 
 ## Obtendo arquivos para gerar o SGBD
+link do drive com todos os arquivos mencionados abaixo: </br>
+https://drive.google.com/drive/folders/1G7e0yO-ugxZEp1H2t9dtGV_WrryjV_nH?usp=sharing </br>
+
 ### Fonte de dados de Voos no Brasil
 Incialmente, baixamos as tabelas csv, no período de 2010 à 2019. Como as tabelas não seguiam o mesmo padrão, elas foram padronizadas individualmente,
 apenas utilizando recursos do editor de texto. Desse modo, foram obtidos os arquivos csv base, para serem trabalhados e transformados em tabelas. Como o github 
@@ -54,13 +57,12 @@ ser encontrados na pasta 3 - PYTHON GERAÇÃO DO ULTIMO CSV.
 
 ## Obtendo o SGBD
 ### Criando Tabelas 
-</br>
-Foram geradas 5 tabelas até o momento:
-- Estado
-- Cidade
-- Aeroporto
-- Voo
-- Casos
+Foram geradas 5 tabelas até o momento: </br>
+- Estado </br>
+- Cidade </br>
+- Aeroporto </br>
+- Voo </br>
+- Casos </br>
 
 A query de criação das tabelas que vieram dos arquivos de voos, estão na raiz da pasta VOOS. Dessas tabelas, a tabela estado é a única que teve os inserts criados
 do zero, e a query para isso também se encontra na raiz. Os dados de inserção para as outras tabelas podem ser encontrados na pasta 05 - GERAÇÃO DE QUERIES DE INSERT.
