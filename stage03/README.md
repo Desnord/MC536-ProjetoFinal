@@ -39,9 +39,6 @@ Em seguida, como eram muitas tabelas, 12 por ano, utilizamos um script para junt
 Em seguida, esses dados foram trabalhados a primeira vez no Orange, a fim de facilitar o processo de separação dos dados. Com ele, obtemos os arquivos csv que podem 
 ser encontrados na pasta 03-ORANGE-VOOS (os arquivos do orange também estão nessa pasta).
 
-Por fim, utilizamos um script python parar terminar de processar as tabelas csv. Com esses csvs, já temos os dados de inserção do banco. As tabelas e o script para isso
-pode ser encontrado na pasta 04-PYTHON GERAÇÃO DOS ULTIMOS CSVS. 
-
 ### Fonte de casos de Gripe no Brasil
 Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
 Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
@@ -51,9 +48,6 @@ ou na pasta  - BASE CASOS. </br>
 
 O arquivo que utilizamos foi o casos_uf.csv. Em seguida, esse arquivo foi preparado no Orange, a fim de tirar as colunas desnecessárias e remover os dados de 2009.
 Como resultado, obtivemos o arquivo casos01.csv. O arquivo do orange e o csv, podem ser encontrados na pasta 2 - ORANGE CASOS.
-
-Por último, passamos o csv por um script python apenas para padronizar a tabela, e assim obter o csv final para inserir no banco. Esse script e a tabela final podem 
-ser encontrados na pasta 3 - PYTHON GERAÇÃO DO ULTIMO CSV.
 
 ## Obtendo o SGBD
 ### Criando Tabelas 
@@ -65,10 +59,10 @@ Foram geradas 5 tabelas até o momento: </br>
 - Casos </br>
 
 A query de criação das tabelas que vieram dos arquivos de voos, estão na raiz da pasta VOOS. Dessas tabelas, a tabela estado é a única que teve os inserts criados
-do zero, e a query para isso também se encontra na raiz. Os dados de inserção para as outras tabelas podem ser encontrados na pasta 05 - GERAÇÃO DE QUERIES DE INSERT.
+do zero, e a query para isso também se encontra na raiz. Os dados de inserção para as outras tabelas podem ser encontrados na pasta 04 - GERAÇÃO DE QUERIES DE INSERT.
 
 A query de criação da tabela de casos está na raiz da pasta CASOS. Os inserts dessa tabela foram gerados com um script python, tal que ambos podem ser encontrados
-na pasta 4 - GERAÇÃO DE QUERIES DE INSERT.
+na pasta 3 - GERAÇÃO DE QUERIES DE INSERT.
 
 ### Entidade Relacionamento
 O modelo entidade relacionamento foi criado com base na junção das fontes de dados trabalhadas até o momento, e o diagrama pode ser encontrado na raiz da pasta stage03.
