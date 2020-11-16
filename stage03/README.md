@@ -80,7 +80,8 @@ Algumas queries que podem ser utilizadas para análise futura, foram criadas e c
 Não conseguimos inserir a tabela de clima a tempo, como encontramos uma quantidade de dados considerável para 
 os dados de casos e de voos, achamos melhor buscar uma fonte com dados de clima que seja mais completa. Entretanto,
 como ainda não encontramos uma fonte que possua estes dados, deixamos para implementar na próxima etapa. Se não 
-obtivermos sucesso, tentaremos buscar outras fontes de dados que possam ser integradas.
+obtivermos sucesso, tentaremos buscar outras fontes de dados que possam ser integradas. Outra coisa que deve ser feita no futuro,
+é padronizar o uso das datas, já que os casos estão classificados por semana, e os voos no formato de data padrão. 
 
 Em relação ao processo de transformar as fontes em um sgbd, achamos muito complicado juntar os dados todos, bem 
 como encontrar as fontes de maneira que poderiamos utilizar. Também tivemos limitações com o uso do github, pelo tamanho dos arquivos,
