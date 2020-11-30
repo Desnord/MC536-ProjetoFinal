@@ -29,11 +29,10 @@ ARMÁRIO(_Código_, Tamanho, Ocupante)
 > O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas.
 
 ## Bases de Dados
-> Elencar as bases de dados utilizadas no projeto. Trata-se de uma atualização daquelas apresentadas na Etapa 3.
-
 título da base | link | breve descrição
 ----- | ----- | -----
-`<título da base>` | `<link para a página da base>` | `<breve descrição da base>`
+`voos no brasil` | `https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos` | `datasets com voos no brasil, por ano e mês`
+`infogripe` | `http://info.gripe.fiocruz.br` | `sistema de casos de gripe no brasil`
 
 
 ## Arquivos de Dados
