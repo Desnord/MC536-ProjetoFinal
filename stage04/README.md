@@ -32,8 +32,12 @@ ARMÁRIO(_Código_, Tamanho, Ocupante)
 título da base | link | breve descrição
 ----- | ----- | -----
 `voos no brasil` | https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos | `datasets com voos no brasil, por ano e mês`
-`infogripe` | http://info.gripe.fiocruz.br | `sistema de casos de gripe no brasil`
+`infogripe*` | http://info.gripe.fiocruz.br | `sistema de casos de gripe no brasil`
 
+*Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
+Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
+o csv do repositório deles, que pode ser encontrado no link a seguir:</br>
+https://github.com/belisards/srag_brasil
 
 ## Arquivos de Dados
 > Elencar os arquivos usados no projeto que estão disponíveis no Github do projeto (manter os da Etapa 3 e acrescentar os da Etapa 4).
