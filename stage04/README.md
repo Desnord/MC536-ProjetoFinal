@@ -7,7 +7,10 @@ O vírus da gripe muda todo ano, sendo necessário desenvolvimento de vacinas pa
 Assim, nossa motivação principal é a possibilidade de prever os casos de gripe esperados para determinado local e poder melhorar a profilaxia.
 
 ## Método
->Foram escolhidos algumas fontes de dados, que estão no tópico seguinte. Essas bases foram trabalhadas a fim de montar um banco de dados em SQL.
+>Foram escolhidos algumas fontes de dados, que estão no tópico seguinte. 
+Essas bases foram trabalhadas a fim de montar um banco de dados em SQL na etapa 3, e agora revisado na etapa 4.
+Também foi trabalho uma parte para realizar análises com grafos, em Cypher.
+
 >Iremos realizar algumas análises:
 - predições relacionadas a gripe, como o número de casos esperados em determinado estado; 
 - como esses casos estão distribuidos pelo país e como esse vírus se espalha geograficamente;
