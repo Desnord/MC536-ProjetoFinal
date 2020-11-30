@@ -10,13 +10,22 @@
 
 ## Modelos Lógicos Atualizados
 
-> Coloque aqui os dois modelos lógicos dos bancos de dados relacionados aos modelos conceituais. O modelo lógico da etapa anterior pode ser copiado ou apresentado revisado. Para o modelo relacional, sugere-se o formato a seguir. Para outros modelos lógicos o formato é livre, pode ser adotado aqueles apresentados em sala.
-
-> Exemplo de modelo lógico relacional
+modelo lógico SQL:
 ~~~
-PESSOA(_Código_, Nome, Telefone)
-ARMÁRIO(_Código_, Tamanho, Ocupante)
-  Ocupante chave estrangeira -> PESSOA(Código)
+Estado(_UF_, Nome)
+
+Cidade(_Nome_, _Estado_)
+  Estado chave estrangeira -> Estado(UF)
+  
+Aeroporto(_Sigla_, Descricao, Cidade)
+  Cidade chave estrangeira -> Cidade(Nome)
+ 
+Voo(_VooID_, Origem, Destino, Partida, Chegada)
+  Origem chave estrangeira -> Aeroporto(Sigla)
+  Destino chave estrangeira -> Aeroporto(Sigla)
+
+Casos(_Estado_, _Ano_, _Semana_, NumCasos)
+  Estado chave estrangeira -> Estado(Nome)
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
