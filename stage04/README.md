@@ -31,8 +31,8 @@ ARMÁRIO(_Código_, Tamanho, Ocupante)
 ## Bases de Dados
 título da base | link | breve descrição
 ----- | ----- | -----
-`voos no brasil` | `https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos` | `datasets com voos no brasil, por ano e mês`
-`infogripe` | `http://info.gripe.fiocruz.br` | `sistema de casos de gripe no brasil`
+`voos no brasil` | https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos | `datasets com voos no brasil, por ano e mês`
+`infogripe` | http://info.gripe.fiocruz.br | `sistema de casos de gripe no brasil`
 
 
 ## Arquivos de Dados
