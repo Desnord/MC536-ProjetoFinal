@@ -62,8 +62,8 @@ nome do arquivo | link | breve descrição
 ----- | ----- | -----
 `<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
 
-aeroporto.csv | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/aeroporto.csv | Arquivo CSV de aeroportos obtido na etapa 3.
-cidade.csv | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/cidade.csv | Arquivo CSV de cidades obtido na etapa 3.
+<aeroporto.csv> | <https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/aeroporto.csv> | <Arquivo CSV de aeroportos obtido na etapa 3.>
+<cidade.csv> | <https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/cidade.csv>| <Arquivo CSV de cidades obtido na etapa 3.>
 01voosANO.csv | a | Drive com todos os CSVs de voos obtidos ao final da etapa 3, e que foram utilizados como base na etapa 4.
 casos_uf.csv | a | Arquivo CSV de casos, obtido a partir da fonte original, encontrado em outro projeto no github.
 
