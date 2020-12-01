@@ -6,7 +6,7 @@
 
 ## Modelo Conceitual Atualizado
 
-> ![ER](images/er-taxi.png)
+> ![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
 
 ## Modelos Lógicos Atualizados
 
