@@ -22,15 +22,15 @@ Aeroporto(_Sigla_, Descricao, Cidade)
  
 Periodo(_Id_,_Semana_,_Ano_)
 
-Rotas(_Id_, Origem, Destino, VoosTotais)
+Rota(_Id_, Origem, Destino, VoosTotais)
   Origem chave estrangeira -> Aeroporto(Sigla)
   Destino chave estrangeira -> Aeroporto(Sigla)
  
-Voos(_Rota_, _Periodo_, Quantidade)
-  Rota chave estrangeira -> Rotas(Id)
+Voo(_Rota_, _Periodo_, Quantidade)
+  Rota chave estrangeira -> Rota(Id)
   Periodo chave estrangeira -> Periodo(Id)
   
-Casos(_Estado_, _Periodo_, NumCasos)
+Caso(_Estado_, _Periodo_, NumCasos)
   Estado chave estrangeira -> Estado(Nome)
   Periodo chave estrangeira -> Periodo(Id)
 ~~~
