@@ -1,12 +1,11 @@
 # Etapa 04 - Análises com o Segundo Modelo Lógico
 
 ## Slides da Apresentação da Etapa
-
 > https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/slides/slidesEtapa4.pdf
 
 ## Modelo Conceitual Atualizado
 
-> ![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
+> ![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
 
 ## Modelos Lógicos Atualizados
 
@@ -56,7 +55,7 @@ o csv do repositório deles, que pode ser encontrado no link a seguir:</br>
 https://github.com/belisards/srag_brasil
 
 ## Arquivos de Dados
-> Elencar os arquivos usados no projeto que estão disponíveis no Github do projeto (manter os da Etapa 3 e acrescentar os da Etapa 4).
+> Os arquivos da etapa 3 que aparecem aqui, são os arquivos finais obtidos até lá.
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
