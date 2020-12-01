@@ -30,7 +30,7 @@ Voos(_Rota_, _Periodo_, Quantidade)
 
 Casos(_Estado_, _Periodo_, NumCasos)
   Estado chave estrangeira -> Estado(Nome)
-  Semana chave estrangeira -> 
+  Periodo chave estrangeira -> Periodo(Id)
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
