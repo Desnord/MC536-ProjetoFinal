@@ -60,6 +60,7 @@ https://github.com/belisards/srag_brasil
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
 `<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
+aeroporto.csv | a | Arquivo CSV de aeroportos obtido na etapa 3.
 
 > Os arquivos devem ser colocados na pasta `data`, em subpasta conforme seu papel (externo, interim, processado, raw). A diferença entre externo e raw é que o raw é em formato não adaptado para uso. A pasta `raw` é opcional, pois pode ser substituída pelo link para a base original da seção anterior.
 > Coloque arquivos relacionais (usualmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
