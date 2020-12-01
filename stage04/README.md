@@ -51,8 +51,9 @@ título da base | link | breve descrição
 
 *Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
 Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
-o csv do repositório deles, que pode ser encontrado no link a seguir:</br>
-https://github.com/belisards/srag_brasil
+o csv do repositório deles, que pode ser encontrado no link: https://github.com/belisards/srag_brasil/blob/master/data/casos_uf.csv ou também na pasta
+external. </br>
+
 
 ## Arquivos de Dados
 > Os arquivos da etapa 3 que aparecem aqui, são os arquivos finais obtidos até lá.
@@ -60,7 +61,11 @@ https://github.com/belisards/srag_brasil
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
 `<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
+
 aeroporto.csv | a | Arquivo CSV de aeroportos obtido na etapa 3.
+cidade.csv | a | Arquivo CSV de cidades obtido na etapa 3.
+01voosANO.csv | a | Drive com todos os CSVs de voos obtidos ao final da etapa 3, e que foram utilizados como base na etapa 4.
+casos_uf.csv | a | Arquivo CSV de casos, obtido a partir da fonte original, encontrado em outro projeto no github.
 
 > Os arquivos devem ser colocados na pasta `data`, em subpasta conforme seu papel (externo, interim, processado, raw). A diferença entre externo e raw é que o raw é em formato não adaptado para uso. A pasta `raw` é opcional, pois pode ser substituída pelo link para a base original da seção anterior.
 > Coloque arquivos relacionais (usualmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
