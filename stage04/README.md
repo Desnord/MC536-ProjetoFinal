@@ -20,12 +20,17 @@ Cidade(_Nome_, _Estado_)
 Aeroporto(_Sigla_, Descricao, Cidade)
   Cidade chave estrangeira -> Cidade(Nome)
  
-Voo(_VooID_, Origem, Destino, Partida, Chegada)
+Periodo(_Id_,_Semana_,_Ano_)
+
+Rotas(_Id_, Origem, Destino, VoosTotais)
   Origem chave estrangeira -> Aeroporto(Sigla)
   Destino chave estrangeira -> Aeroporto(Sigla)
+ 
+Voos(_Rota_, _Periodo_, Quantidade)
 
-Casos(_Estado_, _Ano_, _Semana_, NumCasos)
+Casos(_Estado_, _Periodo_, NumCasos)
   Estado chave estrangeira -> Estado(Nome)
+  Semana chave estrangeira -> 
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
