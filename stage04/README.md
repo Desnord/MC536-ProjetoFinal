@@ -73,5 +73,5 @@ nome do arquivo | link | breve descrição
 `casosFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/casosFINAL.csv | `csv final de casos`
 `periodo.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/periodo.csv | `csv de periodo`
 `estado.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/estado.csv | `csv de estado`
-`rotaFINAL.csv` | x | `csv final de rotas`
+`rotaFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/rota.csv | `csv final de rotas`
 `vooFINAL.csv` | x | `csv final de voos`
