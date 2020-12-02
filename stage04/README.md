@@ -35,13 +35,11 @@ Caso(_Estado_, _Periodo_, NumCasos)
 ~~~
 
 ## Programa de extração e conversão de dados atualizado
-
-Para a atualização das tabelas da etapa 3, decidimos continuar utilizando o python localmente para extrair e converter os dados, para otimizar o tempo. Mesmo que algumas partes pudessem ser feitas no jupyter, iria demandar tempo extra para um tarefa não essencial. Os scripts utilizados para gerar as tabelas se encontram na pasta src.
+Para a atualização das tabelas da etapa 3, decidimos continuar utilizando o python localmente para extrair e converter os dados, para otimizar o tempo. Mesmo que algumas partes pudessem ser feitas no jupyter, iria demandar tempo extra para um tarefa não essencial. Os scripts utilizados para gerar as tabelas se encontram na pasta src. </br>
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src
 
 ## Conjunto de queries de dois modelos
-
-As queries geradas para a revisão da etapa 3 se encontram também na pasta src.
+As queries geradas para a revisão da etapa 3 se encontram também na pasta src. </br>
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src
 
 > Acrescente um link para o arquivo do notebook que executa o segundo conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
@@ -78,4 +76,4 @@ nome do arquivo | link | breve descrição
 `periodo.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/periodo.csv | `csv de periodo`
 `estado.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/estado.csv | `csv de estado`
 `rotaFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/rota.csv | `csv final de rotas`
-`vooFINAL.csv` | x | `csv final de voos`
+`vooFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/voo.csv | `csv final de voos`
