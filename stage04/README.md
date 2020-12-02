@@ -29,7 +29,7 @@ Voo(_Rota_, _Periodo_, Quantidade)
   Rota chave estrangeira -> Rota(Id)
   Periodo chave estrangeira -> Periodo(Id)
   
-Caso(_Estado_, _Periodo_, NumCasos)
+Casos(_Estado_, _Periodo_, NumCasos)
   Estado chave estrangeira -> Estado(Nome)
   Periodo chave estrangeira -> Periodo(Id)
 ~~~
