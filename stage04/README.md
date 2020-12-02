@@ -36,7 +36,8 @@ Caso(_Estado_, _Periodo_, NumCasos)
 
 ## Programa de extração e conversão de dados atualizado
 
-> Coloque um link para o arquivo do notebook que executa a extração e conversão de dados. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se a extração e conversão envolverem queries executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
+Para a atualização das tabelas da etapa 3, decidimos continuar utilizando o python localmente para extrair e converter os dados, para otimizar o tempo. Mesmo que algumas partes pudessem ser feitas no jupyter, iria demandar tempo extra para um tarefa não essencial. Os scripts utilizados para gerar as tabelas se encontram na pasta src.
+
 
 ## Conjunto de queries de dois modelos
 
