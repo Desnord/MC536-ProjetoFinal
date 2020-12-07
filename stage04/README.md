@@ -39,8 +39,10 @@ Para a atualização das tabelas da etapa 3, decidimos continuar utilizando o py
 https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src
 
 ## Conjunto de queries de dois modelos
-As queries geradas para a revisão da etapa 3 se encontram também na pasta src. </br>
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src
+As queries geradas para a revisão da etapa 3 se encontram também na pasta src. Porém, elas também estão disponíveis em um notebook.</br>
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src </br>
+https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/notebooks/queries.ipynb </br>
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Desnord/ProjetoFinalMC536/HEAD) </br>
 
 > Acrescente um link para o arquivo do notebook que executa o segundo conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
 > O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas.
