@@ -51,12 +51,14 @@ título da base | link | breve descrição
 ----- | ----- | -----
 `voos no brasil` | https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos | `datasets com voos no brasil, por ano e mês`
 `infogripe*` | http://info.gripe.fiocruz.br | `sistema de casos de gripe no brasil`
+`base de dados inmet**` | https://bdmep.inmet.gov.br | `Banco de Dados Meteorológicos do INMET`
+
 
 *Para estes dados, seria necessário baixar centenas de csvs pelo sistema do infogripe, pois o sistema não tem uma api de acesso direta aos dados.
 Entretanto, encontramos um projeto de um grupo que já fez essa parte de juntar os dados de cada semana, para todos os anos e estados. Assim, utilizamos
 o csv do repositório deles, que pode ser encontrado no link: https://github.com/belisards/srag_brasil/blob/master/data/casos_uf.csv ou também na pasta
 external. </br>
-
+*Base de dados Meteorológicos encontrada, serve bem ao problema em questão.
 
 ## Arquivos de Dados
 nome do arquivo | link | breve descrição
