@@ -56,13 +56,15 @@ MATCH (a:aeroporto)
 RETURN a LIMIT 50
 ~~~
 
-cria arestas, cada rota é uma aresta que liga dois aeroportos, e possui como peso a quantidade de voos da rota
+cria arestas, cada rota é uma aresta que liga dois aeroportos, e possui como atributo a quantidade de voos da rota
 ~~~ cypher
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/rota.csv' AS line
-MERGE (a1:aeroporto {sigla:line.Origem})
-MERGE (a2:aeroporto {sigla:line.Destino})
-CREATE (a1)-[r:rota]->(a2)
-ON CREATE SET r.pesos=line.VoosTotais
+MATCH (a1:aeroporto {sigla:line.Origem})
+MATCH (a2:aeroporto {sigla:line.Destino})
+CREATE (a1)-[r:rota {total: line.VoosTotais}]->(a2)
+
+MATCH p = ()-[r:rota]->() 
+RETURN p LIMIT 5
 ~~~
 
 ## Bases de Dados
