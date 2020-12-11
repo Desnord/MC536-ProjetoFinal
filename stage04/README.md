@@ -40,11 +40,30 @@ https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src
 
 ## Conjunto de queries de dois modelos
 As queries geradas para a revisão da etapa 3 se encontram também na pasta src. Porém, elas também estão disponíveis em um notebook.</br>
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src </br>
-https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/notebooks/queries.ipynb </br>
+Além disso, esse notebook contém diversos selects e views, que são utilizadas para análise de dados, gerando um csv que é utilizado no notebook de análises. </br> 
+pasta scr: https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src </br>
+notebook de queries (jupyter/binder): https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/notebooks/queries.ipynb </br>
+notebook de análises (colab): https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/notebooks/analise.ipynb </br>
 
-> Acrescente um link para o arquivo do notebook que executa o segundo conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
-> O link para queries da etapa 3 também deve aparecer aqui e as queries poderão ser revisadas.
+### cypher 
+
+cria nós, cada aeroporto é um nó que possui sigla e o nome da cidade em que está localizado
+~~~ cypher
+LOAD CSV WITH HEADERS FROM 'https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/aeroportoFINAL.csv' AS line
+CREATE (:aeroporto {cidade: line.Cidade , sigla: line.Sigla})
+
+MATCH (a:aeroporto)
+RETURN a LIMIT 50
+~~~
+
+cria arestas, cada rota é uma aresta que liga dois aeroportos, e possui como peso a quantidade de voos da rota
+~~~ cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/rota.csv' AS line
+MERGE (a1:aeroporto {sigla:line.Origem})
+MERGE (a2:aeroporto {sigla:line.Destino})
+CREATE (a1)-[r:rota]->(a2)
+ON CREATE SET r.pesos=line.VoosTotais
+~~~
 
 ## Bases de Dados
 título da base | link | breve descrição
