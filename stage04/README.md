@@ -81,7 +81,7 @@ MATCH p = ()-[r:rota]->()
 RETURN p LIMIT 5
 ~~~
 
-imagem do grafo, com nós e arestas criados </br>
+imagem simplificada do grafo (mostrando apenas 25 nós e suas arestas) </br>
 
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
