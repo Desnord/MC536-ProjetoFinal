@@ -66,6 +66,7 @@ cria nós, cada aeroporto é um nó que possui sigla e o nome da cidade em que e
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/aeroportoFINAL.csv' AS line
 CREATE (:aeroporto {cidade: line.Cidade , sigla: line.Sigla})
 
+
 MATCH (a:aeroporto)
 RETURN a LIMIT 50
 ~~~
@@ -75,7 +76,8 @@ cria arestas, cada rota é uma aresta que liga dois aeroportos, e possui como at
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/rota.csv' AS line
 MATCH (a1:aeroporto {sigla:line.Origem})
 MATCH (a2:aeroporto {sigla:line.Destino})
-CREATE (a1)-[r:rota {total: line.VoosTotais}]->(a2)
+CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
+
 
 MATCH p = ()-[r:rota]->() 
 RETURN p LIMIT 5
@@ -84,11 +86,11 @@ RETURN p LIMIT 5
 imagem simplificada do grafo (mostrando apenas 25 nós e suas arestas) </br>
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
-"Pagerank" dos aeroportos
+"Pagerank" dos aeroportos com pesos (total de voos)
 ~~~ cypher
-CALL gds.graph.create('prRotas','aeroporto','rota')
+CALL gds.graph.create('prRotas','aeroporto','rota',{relationshipProperties: 'total'})
 
-CALL gds.pageRank.stream('prRotas')
+CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
 YIELD nodeId, score 
 RETURN gds.util.asNode(nodeId).sigla AS sigla, gds.util.asNode(nodeId).cidade AS cidade, score AS pontuacao
 ORDER BY pontuacao DESC
