@@ -72,7 +72,8 @@ RETURN p LIMIT 5
 ~~~
 
 imagem do grafo, com nós e arestas criados </br>
-![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.PNG)
+
+![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
 ## Bases de Dados
 título da base | link | breve descrição
