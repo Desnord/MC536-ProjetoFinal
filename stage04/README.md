@@ -52,6 +52,8 @@ notebook de análises (colab): https://github.com/Desnord/ProjetoFinalMC536/tree
 Como resultado do notebook de análises, realizamos análises visuais, com dois gráficos interativos. Um deles apresenta as ocorrências de casos de gripe ao longo dos períodos, e o segundo apresenta as ocorrências de voos que chegam ao longo dos períodos. Através desses gráficos, é possível escolher quais estados mostrar as informações, exibindo por default todas as 27 curvas.
 Após isso, com o modelo de regressão DecisionTreeRegressor do sklearn (ML), treinamos os dados de análise para realizar a predição dos casos em determinados período e estado. Obtemos uma confiabilidade de 92% para a predição com esse modelo, ou seja, o erro é bem pequeno ao prever casos. Assim, no notebook de análises, podemos dar como entrada um período (ano e semana), estado e quantidade de voo, e atráves do modelo treinado realizar a predição da quantidade de casos aproximados para a gripe comum. 
 
+*para executar o notebook analises.ipynb, recomenda-se utilizar o google colab, por questões de compatibilidade de algumas bibliotecas utilizadas. 
+
 ### cypher 
 Para a segunda parte das análises, escolhemos outro modelo lógico, o de grafos, pois este funciona melhor com a parte de rotas entre aeroportos. Cada aeroporto é um nó e as rotas são as arestas. Escolhemos usar o cypher, pois foi trabalhado em aulas e também em alguns labs, facilitando o processo.
 
