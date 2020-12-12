@@ -107,14 +107,27 @@ MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
 SET a.prscore = score
 ~~~
 
-community detection dos aeroporto e rotas
+comunidades dos aeroportos
+
+gera grafo das comunidades
 ~~~ cypher
 CALL gds.graph.create('comunidade','aeroporto','rota')
+~~~
+
+obtem e exibe comunidades
+~~~ cypher
 CALL gds.louvain.stream('comunidade')
 YIELD nodeId, communityId
+RETURN gds.util.asNode(nodeId).sigla AS sigla, communityId
+ORDER BY sigla DESC
+~~~
 
-RETURN gds.util.asNode(nodeId).id AS nid, communityId
-ORDER BY nid DESC
+obtem comunidades e armazenas ids nos aeroportos
+~~~ cypher
+CALL gds.louvain.stream('comunidade')
+YIELD nodeId, communityId
+MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
+SET a.comunidade = communityId
 ~~~
 
 ## Bases de Dados
