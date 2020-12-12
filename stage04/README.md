@@ -49,7 +49,7 @@ notebook de análises (colab): https://github.com/Desnord/ProjetoFinalMC536/tree
 
 cria nós, cada aeroporto é um nó que possui sigla e o nome da cidade em que está localizado
 ~~~ cypher
-LOAD CSV WITH HEADERS FROM 'https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/aeroportoFINAL.csv' AS line
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/aeroportoFINAL.csv' AS line
 CREATE (:aeroporto {cidade: line.Cidade , sigla: line.Sigla})
 
 MATCH (a:aeroporto)
