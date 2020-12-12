@@ -52,9 +52,9 @@ notebook de análises (colab): https://github.com/Desnord/ProjetoFinalMC536/tree
 Como resultado do notebook de análises, realizamos análises visuais, com dois gráficos interativos. Um deles apresenta as ocorrências de casos de gripe ao longo dos períodos, e o segundo apresenta as ocorrências de voos que chegam ao longo dos períodos. Através desses gráficos, é possível escolher quais estados mostrar as informações, exibindo por default todas as 27 curvas.
 Após isso, com o modelo de regressão DecisionTreeRegressor do sklearn (ML), treinamos os dados de análise para realizar a predição dos casos em determinados período e estado. Obtemos uma confiabilidade de 92% para a predição com esse modelo, ou seja, o erro é bem pequeno ao prever casos. Assim, no notebook de análises, podemos dar como entrada um período (ano e semana), estado e quantidade de voo, e atráves do modelo treinado realizar a predição da quantidade de casos aproximados para a gripe comum. 
 
-![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico1.png)
-![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico2.png)
-![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/predicao.png)
+![G1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico1.png)
+![G2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico2.png)
+![PRED](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/predicao.png)
 
 *para executar o notebook analises.ipynb, recomenda-se utilizar o google colab, por questões de compatibilidade de algumas bibliotecas utilizadas. 
 
