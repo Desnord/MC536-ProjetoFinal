@@ -6,10 +6,10 @@
 ## Modelo Conceitual Atualizado
 
 modelo antigo:
-![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
+![ER1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
 
 modelo final:
-![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
+![ER2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
 
 ## Modelos Lógicos Atualizados
 
@@ -71,8 +71,8 @@ MATCH p = ()-[r:rota]->()
 RETURN p LIMIT 5
 ~~~
 
-imagem do grafo, com nós e arestas criados
-![NA1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportos_ e_rotas.png)
+imagem do grafo, com nós e arestas criados </br>
+![NA1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
 ## Bases de Dados
 título da base | link | breve descrição
