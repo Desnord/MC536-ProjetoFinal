@@ -82,8 +82,27 @@ RETURN p LIMIT 5
 ~~~
 
 imagem simplificada do grafo (mostrando apenas 25 nós e suas arestas) </br>
-
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
+
+"Pagerank" dos aeroporto e rotas
+~~~ cypher
+CALL gds.graph.create('pagerank','aeroporto','rota')
+CALL gds.pageRank.stream('pagerank')
+YIELD nodeId, score
+
+RETURN gds.util.asNode(nodeId).sigla AS sigla, score
+ORDER BY score DESC
+~~~
+
+community detection dos aeroporto e rotas
+~~~ cypher
+CALL gds.graph.create('comunidade','aeroporto','rota')
+CALL gds.louvain.stream('comunidade')
+YIELD nodeId, communityId
+
+RETURN gds.util.asNode(nodeId).id AS nid, communityId
+ORDER BY nid DESC
+~~~
 
 ## Bases de Dados
 título da base | link | breve descrição
