@@ -5,7 +5,11 @@
 
 ## Modelo Conceitual Atualizado
 
-> ![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
+modelo antigo:
+![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
+
+modelo final:
+![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
 
 ## Modelos Lógicos Atualizados
 
@@ -68,7 +72,7 @@ RETURN p LIMIT 5
 ~~~
 
 imagem do grafo, com nós e arestas criados
-> ![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportos_ e_rotas.png)
+![NA1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportos_ e_rotas.png)
 
 ## Bases de Dados
 título da base | link | breve descrição
