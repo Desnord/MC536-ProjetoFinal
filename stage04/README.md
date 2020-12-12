@@ -87,13 +87,24 @@ imagem simplificada do grafo (mostrando apenas 25 nós e suas arestas) </br>
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
 "Pagerank" dos aeroportos com pesos (total de voos)
+
+gera grafo do pagerank
 ~~~ cypher
 CALL gds.graph.create('prRotas','aeroporto','rota',{relationshipProperties: 'total'})
-
+~~~
+calcula e exibe pontuação para cada aeroporto
+~~~ cypher
 CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
 YIELD nodeId, score 
 RETURN gds.util.asNode(nodeId).sigla AS sigla, gds.util.asNode(nodeId).cidade AS cidade, score AS pontuacao
 ORDER BY pontuacao DESC
+~~~
+calcula e armazena pontuacao em cada aeroporto
+~~~ cypher
+CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
+YIELD nodeId, score
+MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
+SET a.prscore = score
 ~~~
 
 community detection dos aeroporto e rotas
