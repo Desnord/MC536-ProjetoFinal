@@ -67,6 +67,9 @@ MATCH p = ()-[r:rota]->()
 RETURN p LIMIT 5
 ~~~
 
+imagem do grafo, com nós e arestas criados
+> ![ER](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportos_ e_rotas.png)
+
 ## Bases de Dados
 título da base | link | breve descrição
 ----- | ----- | -----
