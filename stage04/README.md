@@ -84,14 +84,14 @@ RETURN p LIMIT 5
 imagem simplificada do grafo (mostrando apenas 25 nós e suas arestas) </br>
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
-"Pagerank" dos aeroporto e rotas
+"Pagerank" dos aeroportos
 ~~~ cypher
-CALL gds.graph.create('pagerank','aeroporto','rota')
-CALL gds.pageRank.stream('pagerank')
-YIELD nodeId, score
+CALL gds.graph.create('prRotas','aeroporto','rota')
 
-RETURN gds.util.asNode(nodeId).sigla AS sigla, score
-ORDER BY score DESC
+CALL gds.pageRank.stream('prRotas')
+YIELD nodeId, score 
+RETURN gds.util.asNode(nodeId).sigla AS sigla, gds.util.asNode(nodeId).cidade AS cidade, score AS pontuacao
+ORDER BY pontuacao DESC
 ~~~
 
 community detection dos aeroporto e rotas
