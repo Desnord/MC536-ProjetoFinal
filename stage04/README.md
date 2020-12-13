@@ -172,5 +172,5 @@ nome do arquivo | link | breve descrição
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
-`aeroportoFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/pagerankAeroportos.csv | `csv de pagerank dos aeroportos`
-`cidadeFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/comunidadesAeroportos.csv | `csv de comunidades de aeroportos`
+`pagerankAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/pagerankAeroportos.csv | `csv de pagerank dos aeroportos`
+`comunidadesAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/comunidadesAeroportos.csv | `csv de comunidades de aeroportos`
