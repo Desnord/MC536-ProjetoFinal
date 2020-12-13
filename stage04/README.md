@@ -136,6 +136,9 @@ Imagens com o grafo (uma geral e outra simplificada):
 </br> pesos das rotas (espessura das arestas)
 ![PCT1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity.png)
 ![PCT2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity2.png)
+
+Essas imagens foram geradas com o neovis.js, utilizando o exemplo deles como base, fazendo apenas algumas pequenas modificações para exibir o nosso grafo. O arquivo html se encontra na pasta src: https://github.com/Desnord/ProjetoFinalMC536/tree/main/stage04/src/visualgraphs.html </br>
+
 ## Bases de Dados
 título da base | link | breve descrição
 ----- | ----- | -----
