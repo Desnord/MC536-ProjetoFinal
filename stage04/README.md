@@ -130,6 +130,8 @@ MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
 SET a.comunidade = communityId
 ~~~
 
+![PCT](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity.png)
+
 ## Bases de Dados
 título da base | link | breve descrição
 ----- | ----- | -----
