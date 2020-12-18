@@ -165,9 +165,7 @@ Nas imagens temos:
 as comunidades representadas por cores;
 a espessura das arestas de acordo com a quantidade de voos realizados naquela rota (quanto maior, mais voos foram feitos);
 o tamanho dos nós de acordo com a relevância do aeroporto, obtido com o cálculo do pagerank (quanto maior o nó, maior a relevância do aeroporto);
-
 Imagem com todo o grafo:
 ![PCT1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity.png)
-
 Imagem com uma pequena parte do grafo:
 ![PCT2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity2.png)
