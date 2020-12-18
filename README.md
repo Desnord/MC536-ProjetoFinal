@@ -106,7 +106,7 @@ CREATE TABLE Estado
 AS SELECT UF,Nome FROM CSVREAD('https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/estado.csv');
 ~~~
 
-Em seguida, realizamos diversos queries em sql com as mais diversas complexidades que trazem diversas informações interessantes, porém não foram utilizadas diretamente na análise final. A única query utilizada para obter os gráficos e a predição de casos foi a última do notebook, tal que as queries anteriores serviram como parte do raciocínio utilizado para se obtê-la. Como muitas queries foram feitas, listamos a seguir algumas delas, apenas como exemplo:
+Em seguida, realizamos diversos queries em sql com as mais diversas complexidades que trazem diversas informações interessantes, porém não foram utilizadas diretamente na análise final. A única query utilizada para obter os gráficos e a predição de casos foi a última do notebook, tal que as queries anteriores serviram como parte do raciocínio utilizado para se obtê-la, dado a sua alta complexidade. Como muitas queries foram feitas, listamos a seguir algumas delas, apenas como exemplo:
 
 ~~~sql
 -- total de casos de gripe por estado, entre 2010 e 2019
