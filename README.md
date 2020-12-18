@@ -55,7 +55,7 @@ De modo geral, conseguimos direcionar o projeto da forma que gostariamos, apesar
  
  </br>
  </br>
-<div align="center"><h3> Stage04 e Final</h3></div>
+<div align="center"><h2> Stage04 e Final</h2></div>
 Na etapa 4 revisamos e terminamos o processamento iniciado na etapa 3, obtendo as análises desejadas com o modelo relacional: gráficos e predição de casos. Além disso, implementamos um segundo modelo, o de grafos, atráves do neo4j/cypher. Com esse segundo modelo, realizamos uma análise visual de alguns dados.
 
 ## Processamento dos dados
@@ -98,4 +98,66 @@ Casos(_Estado_, _Periodo_, NumCasos)
 
 ### Análises - Modelo De Grafos (Neo4j/Cypher)
 
+> Criamos os nós e arestas do grafo, com as queries em cypher a seguir:
 
+~~~ cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/aeroportoFINAL.csv' AS line
+CREATE (:aeroporto {cidade: line.Cidade , sigla: line.Sigla})
+~~~
+
+~~~ cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/rota.csv' AS line
+MATCH (a1:aeroporto {sigla:line.Origem})
+MATCH (a2:aeroporto {sigla:line.Destino})
+CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
+~~~
+
+![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
+
+
+> "Pagerank" dos aeroportos com pesos (total de voos)
+
+gera grafo do pagerank
+~~~ cypher
+CALL gds.graph.create('prRotas','aeroporto','rota',{relationshipProperties: 'total'})
+~~~
+calcula e exibe pontuação para cada aeroporto
+~~~ cypher
+CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
+YIELD nodeId, score 
+RETURN gds.util.asNode(nodeId).sigla AS sigla, gds.util.asNode(nodeId).cidade AS cidade, score AS pontuacao
+ORDER BY pontuacao DESC
+~~~
+calcula e armazena pontuacao em cada aeroporto
+~~~ cypher
+CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
+YIELD nodeId, score
+MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
+SET a.prscore = score
+~~~
+
+> comunidades dos aeroportos
+
+gera grafo das comunidades
+~~~ cypher
+CALL gds.graph.create('comunidade','aeroporto','rota')
+~~~
+
+obtem e exibe comunidades
+~~~ cypher
+CALL gds.louvain.stream('comunidade')
+YIELD nodeId, communityId
+RETURN gds.util.asNode(nodeId).sigla AS sigla, communityId
+ORDER BY sigla DESC
+~~~
+
+obtem comunidades e armazenas ids nos aeroportos
+~~~ cypher
+CALL gds.louvain.stream('comunidade')
+YIELD nodeId, communityId
+MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
+SET a.comunidade = communityId
+~~~
+
+![PCT1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity.png)
+![PCT2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity2.png)
