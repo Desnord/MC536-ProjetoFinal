@@ -94,8 +94,69 @@ Casos(_Estado_, _Periodo_, NumCasos)
 ~~~
 
 ### Análises - Modelo Tabular (SQL)
+Para realizar análises com o modelo tabular, criamos dois notebooks: analises e queries. No notebook de queries, inicialmente, criamos todas as tabelas em sql a partir dos csvs obtidos no processamento como o exemplo a seguir:
+
+~~~sql
+CREATE TABLE Estado
+(
+    UF VARCHAR(2) NOT NULL,
+    Nome VARCHAR(40) NOT NULL,
+    PRIMARY KEY(UF)
+)
+AS SELECT UF,Nome FROM CSVREAD('https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/estado.csv');
+~~~
+
+Em seguida, realizamos diversos queries em sql com as mais diversas complexidades que trazem diversas informações interessantes, porém não foram utilizadas diretamente na análise final. A única query utilizada para obter os gráficos e a predição de casos foi a última do notebook, tal que as queries anteriores serviram como parte do raciocínio utilizado para se obtê-la. Como muitas queries foram feitas, listamos a seguir algumas delas, apenas como exemplo:
+
+~~~sql
+-- total de casos de gripe por estado, entre 2010 e 2019
+
+select Estado, SUM(NumCasos) TotalDeCasos
+from Casos
+group by Estado;
+~~~
 
 
+~~~sql
+-- estados do destino de cada rota
+
+select r.Id, r.Destino, c.Estado
+from Rota r, Aeroporto a, Cidade c
+where r.Destino = a.Sigla and a.Cidade = c.Nome;
+~~~
+
+~~~sql
+-- para todo estado, mostra a quantidade de voos naquele periodo
+
+SELECT ep.estado, ep.periodo, coalesce(vei.qtd, 0) as qtd
+FROM EstadoPeriodos as ep
+LEFT JOIN VoosEstadoIncompleto as vei
+on vei.periodo = ep.periodo and vei.estado = ep.estado;
+~~~
+
+E a seguir temos a última query, que é um select que foi feito a partir de uma view. Com ela, agrupamos os dados de voos e casos por periodo e estado, e em seguinda salvamos as informações em um csv (analise.csv):
+
+~~~sql
+-- seleciona estados, periodos (semana+ano), quantidade de voos realizados, quantidade de casos registrados
+
+select aux.estado,p.semana,p.ano,aux.voos,aux.casos
+from Periodo p, auxiliar2 aux
+where aux.Periodo = p.Id;
+~~~
+
+
+Por fim, temos o resultado final dessa parte, que foi feito em um notebook de analises e utilizamos como base dois arquivos csv: estado.csv (tabela com todos os estados) e analise.csv (tabela obtida com o SGBD). Assim, realizamos análises visuais a partir desses dois csvs, com dois gráficos interativos. Para cada estado, os casos e voos são buscados e representados de acordo. O primeiro gráfico, apresenta as ocorrências de casos de gripe ao longo dos períodos, e o segundo apresenta as ocorrências de voos que chegam ao longo dos períodos. Através desses gráficos, é possível escolher quais estados mostrar as informações, exibindo por default todas as 27 curvas (26 estados + distrito federal). 
+
+Gráfico 1: Casos x Período </br>
+![G1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico1.png)
+
+Gráfico 2: Voos x Período </br>
+![G2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico2.png)
+
+Em seguida, temos a predição dos casos, que utilizou apenas o csv de analise. Com o modelo de regressão DecisionTreeRegressor do sklearn (ML), treinamos os dados de análise para realizar a predição dos casos em determinados período e estado. Obtemos uma confiabilidade de aproximadamente 92% com esse modelo, ou seja, o erro é bem pequeno ao prever casos e dado as limitações do trabalho, o resultado é bem satisfatório. Para realizar uma predição, fornecemos como entrada: um período (ano e semana), estado e quantidade de voo. Depois, atráves do modelo treinado, é feita a predição da quantidade de casos aproximados para a gripe comum. 
+
+Exemplo para predição: </br>
+![PRED](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/predicao.png)
 
 ### Análises - Modelo De Grafos (Neo4j/Cypher)
 
@@ -160,7 +221,7 @@ MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
 SET a.comunidade = communityId
 ~~~
 
-Como resultado dessa análise, obtivemos o seguinte grafo, com todos os aeroportos e rotas representados. A primeira imagem contém todo o grafo, com todos os aeroportos e rotas sendo representados na figura. Como o grafo é muito grande, colocamos uma segunda imagem com apenas uma amostra do grafo, em que podemos ver com clareza o resultado das análises feitas.
+Como resultado dessa análise, obtivemos o seguinte grafo, com todos os aeroportos e rotas representados. A primeira imagem contém todo o grafo, com todos os aeroportos e rotas sendo representados na figura. Como o grafo é muito grande, colocamos uma segunda imagem com apenas uma amostra do grafo, em que podemos ver com clareza o resultado das análises feitas. Além disso, essas imagens foram obtidas com o neovis.js, uma biblioteca do javascript que pode ser facilmente interligada ao neo4j para obter imagens de grafos.
 Nas imagens temos:
 as comunidades representadas por cores;
 a espessura das arestas de acordo com a quantidade de voos realizados naquela rota (quanto maior, mais voos foram feitos);
