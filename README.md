@@ -96,9 +96,10 @@ Casos(_Estado_, _Periodo_, NumCasos)
 ### Análises - Modelo Tabular (SQL)
 
 
+
 ### Análises - Modelo De Grafos (Neo4j/Cypher)
 
-> Criamos os nós e arestas do grafo, com as queries em cypher a seguir:
+> Criamos os nós e arestas do grafo, com as queries em cypher a seguir e em seguida temos uma pequena amostra do grafo:
 
 ~~~ cypher
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/aeroportoFINAL.csv' AS line
@@ -115,7 +116,7 @@ CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/aeroportosErotas.png)
 
 
-> "Pagerank" dos aeroportos com pesos (total de voos)
+> Aqui geramos o pagerank dos aeroportos com pesos (total de voos):
 
 gera grafo do pagerank
 ~~~ cypher
@@ -136,7 +137,7 @@ MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
 SET a.prscore = score
 ~~~
 
-> comunidades dos aeroportos
+> Tabém geramos as comunidades dos aeroportos:
 
 gera grafo das comunidades
 ~~~ cypher
@@ -159,5 +160,14 @@ MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
 SET a.comunidade = communityId
 ~~~
 
+Como resultado dessa análise, obtivemos o seguinte grafo, com todos os aeroportos e rotas representados. A primeira imagem contém todo o grafo, com todos os aeroportos e rotas sendo representados na figura. Como o grafo é muito grande, colocamos uma segunda imagem com apenas uma amostra do grafo, em que podemos ver com clareza o resultado das análises feitas.
+Nas imagens temos:
+as comunidades representadas por cores;
+a espessura das arestas de acordo com a quantidade de voos realizados naquela rota (quanto maior, mais voos foram feitos);
+o tamanho dos nós de acordo com a relevância do aeroporto, obtido com o cálculo do pagerank (quanto maior o nó, maior a relevância do aeroporto);
+
+Imagem com todo o grafo:
 ![PCT1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity.png)
+
+Imagem com uma pequena parte do grafo:
 ![PCT2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity2.png)
