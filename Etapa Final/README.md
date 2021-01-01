@@ -17,26 +17,133 @@
 >   Escolhemos o tema da gripe para o projeto, por ser um assunto bem relevante na área da saúde e que pode se relacionar bem com diversos fatores. Assim é possível realizar uma proposta diversificada, além de facilitar a busca de dados de modelos variados. O vírus da gripe muda todo ano, sendo necessário desenvolvimento de vacinas para acompanhar o combate a doença. Assim, nossa motivação principal é a possibilidade de prever os casos de gripe esperados para determinado local e poder melhorar a profilaxia.
 
 ## Detalhamento do Projeto
-> Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
-> Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
+> A partir do modelo relacional, um total de 3 análises foram feitas: Gráfico de voos x período, gráfico de casos x período e predição de casos. A geração dos gráficos foram simples de se elaborar, diferente do processamento dos dados. Apenas importamos os dados de 2 tabelas: analises.csv (obtida depois de diversos select's, views e joins que foram salvos depois de um select final) e estado.csv. Utilizando a biblioteca plotly geramos os gráficos e depois fizemos a predição de casos com um algoritmo de ML usando o sklearn. De forma resumida, temos os seguintes trechos de código:
 
+importando dados (foram importados direto do github no notebook, para ambas as tabelas):
 ~~~python
-df = pd.read_excel("/content/drive/My Drive/Colab Notebooks/dataset.xlsx");
-sns.set(color_codes=True);
-sns.distplot(df.Hemoglobin);
-plt.show();
+url = "https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/analise.csv"
+data = requests.get(url).content
+csv = pd.read_csv(io.StringIO(data.decode("utf-8")))
 ~~~
 
+gerando gráfico (praticamente o mesmo codigo para ambos os gráficos):
+~~~python
+layout = go.Layout(
+    title="casos de gripe no Brasil por período",
+    xaxis=dict(title="periodo"),
+    yaxis=dict(title="casos"),
+    autosize=False,
+    width=800,
+    height=600,
+    margin=go.layout.Margin(l=50,r=50,b=50,t=50,pad = 4)
+)
+
+fig = go.Figure(layout=layout) 
+
+for estado in est['UF'].tolist():
+  auxx = []
+  auxy = []
+
+  ctd=0
+  for i in range(len(xlist)):
+    if xlist[i][0] == estado:
+      auxx.append(ctd)
+      auxy.append(ylist[i])
+      ctd+=1
+
+  fig.add_trace(go.Scatter(x=auxx, y=auxy,mode='lines+markers', name=estado))
+fig.show()
+~~~
+
+prevendo casos (utilizando machine learning):
+~~~python
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import r2_score
+
+# arvore de decisao para predicao de casos
+lg = DecisionTreeRegressor(random_state=0)
+lg.fit(x_treino, y_treino)
+
+ypred = lg.predict(x_teste)
+
+r2 = r2_score(y_teste,ypred)
+~~~
+Por fim, o código completo dessas análises pode ser encontrado no notebook a seguir (utilizamos o colab):
+https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/notebooks/analise.ipynb
+
+> Para a parte do cypher, realizamos as queries de pagerank e community, e elaboramos uma imagem representando essa análise. A imagem foi gerada utilizando javascript/css/html, com um template do neovis. Esse template se encontra na pasta src, e há uma breve explicação no readme dentro da pasta: 
+https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/src/visualgraphs.html
+
 ## Evolução do Projeto
-> Relatório de evolução, descrevendo as evoluções na modelagem do projeto, dificuldades enfrentadas, mudanças de rumo, melhorias e lições aprendidas. Referências aos diagramas, modelos e recortes de mudanças são bem-vindos.
-> Podem ser apresentados destaques na evolução dos modelos conceitual e lógico. O modelo inicial e intermediários (quando relevantes) e explicação de refinamentos, mudanças ou evolução do projeto que fundamentaram as decisões.
-> Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.
+
+<div align="center"><h2> Stage02</h2></div>
+Esse estágio serviu apenas para decidir o assunto a ser trabalhado, análises planejadas para serem feitas e algumas fontes de dados que poderiam ser utilizadas no projeto.
+</br>
+</br>
+<div align="center"><h2> Stage03</h2></div>
+Nessa etapa, escolhemos as duas fontes de dados que utilizamos em todo o projeto. De forma resumida, uma das fontes possuia os casos de gripe e a outra os dados de voos e cidades. Após escolher as fontes, iniciamos o processamento dos dados para interligá-los.
+
+### Modelo Entidade Relacionamento
+![ER1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
+
+### Modelo Lógico
+~~~
+Estado(_UF_, Nome)
+
+Cidade(_Nome_, _Estado_)
+  Estado chave estrangeira -> Estado(UF)
+  
+Aeroporto(_Sigla_, Descricao, Cidade)
+  Cidade chave estrangeira -> Cidade(Nome)
+  
+Voo(_VooID_, Partida, Chegada, Origem, Destino)
+  Rota chave estrangeira -> Aeroporto(_Sigla_)
+  Periodo chave estrangeira -> Aeroporto(_Sigla_)
+  
+Casos(_Estado_, _Semana_, _Ano_, NumCasos)
+  Estado chave estrangeira -> Estado(Nome)
+  Periodo chave estrangeira -> Periodo(Id)
+~~~
+
+### Processamento dos dados
+Todos as fontes de dados estavam apresentadas através de arquivos csv. Baixamos os arquivos e processamos os dados através de scripts python e utilizando o Orange. Até aqui, não conseguimos implementar tudo que gostariamos, e tivemos alguns problemas com a interligação dos dados, que foi revisada e completada na etapa 4. O principal problema, estava com a tabela de voos, que possuia um volume muito grande de dados. 
+
+### Queries realizadas
+Algumas queries foram feitas nessa etapa, porém nenhuma análise foi feita com elas. Apenas para deixar como exemplo, uma das queries feitas foi a seguinte:
+
+~~~sql
+SELECT v.VooID, v.Origem, v.Destino, v.Partida, v.Chegada 
+       FROM Voo v, Aeroporto aero, Cidade cid
+       WHERE v.Destino = aero.Sigla and aero.Cidade = cid.Nome and cid.Estado = 'SP';	
+~~~
+
+### Considerações sobre essa etapa
+De modo geral, conseguimos direcionar o projeto da forma que gostariamos, apesar dos problemas encontrados. Para a etapa 4, continuamos o que foi feito na etapa 3, complementando e adicionando o que fosse necessário. Assim, arrumamos o problema da tabela de voos, e realizamos as análises desejadas desde o começo do projeto, com sucesso. 
+
+</br>
+</br>
+<div align="center"><h2> Stage04 e Final</h2></div>
+Na etapa 4 revisamos e terminamos o processamento iniciado na etapa 3, obtendo as análises desejadas com o modelo relacional: gráficos e predição de casos. Além disso, implementamos um segundo modelo, o de grafos, atráves do neo4j/cypher. Com esse segundo modelo, realizamos uma análise visual de alguns dados.
+
+## Processamento dos dados
+Para processar os dados, continuamos do final da etapa 3 e utilizamos scripts python para processar os últimos csvs obtidos até então. Aqui, acrescentamos duas tabelas a fim de reduzir o volume de dados de voos, no caso, as tabelas periodo e rota. Com a tabela de periodo, ao invés de exibir os dados por dia e ano, agrupamos todos os voos por semana e separamos por rota. Assim, cada voo é uma rota que ocorre em um período, e possui uma quantidade de ocorrências.
+
+### Modelo Entidade Relacionamento
+O modelo entidade relacionamento foi revisado em conjunto com o modelo lógico, a fim de resolver os problemas encontrados com a tabela de voos:
+![ER2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
+
+### Modelo Lógico
+Aqui o modelo lógico final foi obtido, em que foram adicionados duas tabelas em comparação com o modelo da etapa 3, além de alterar as tabelas já existentes. Com esse modelo, foi possível reduzir a tabela de voos que tinha ~10 milhões de linhas, para apenas ~3500 linhas, perdendo apenas um pouco de informação.
 
 ## Resultados e Discussão
+
 > Apresente os resultados da forma mais rica possível, com gráficos e tabelas. Mesmo que o seu código rode online em um notebook, copie para esta parte a figura estática. A referência a código e links para execução online pode ser feita aqui ou na seção de detalhamento do projeto (o que for mais pertinente).
 > A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?
 
 ## Conclusões
+  De modo geral, conseguimos direcionar o projeto da forma que gostariamos, apesar dos problemas encontrados. Para a etapa 4, continuamos o que foi feito na etapa 3, complementando e adicionando o que fosse necessário. Assim, arrumamos os problemas encontrados, e realizamos as análises desejadas desde o começo do projeto, com sucesso. 
+![ER Final](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/.png)
+
 > Apresente aqui as conclusões finais do trabalho e as lições aprendidas.
 
 ## Modelo Conceitual Final
