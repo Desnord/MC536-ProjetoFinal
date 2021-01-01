@@ -41,7 +41,7 @@ plt.show();
 
 ## Modelo Conceitual Final
 
-> ![ER Taxi](images/er-taxi.png)
+> ![ER Final](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/entidadeRelacionamento2.png)
 
 ## Modelos Lógicos Finais
 
