@@ -8,15 +8,16 @@
 
 ## Slides da Apresentação da Etapa Final
 
-> Coloque um link para o arquivo dos slides da apresentação final que estão na pasta `slides`.
+>   Quando apresentamos o trabalho, utilizamos o README.md da etapa 4: https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/README.md
 
 ## Resumo do Projeto
-> O projeto final da disciplina de banco de dados consiste em encontrar diversas fontes de dados, relacionados à um tema da saúde, com formatos diferentes e assim trabalhar para que possam ser interligados. E após isso, realizar algum tipo de análise. 
-No nosso caso, trabalhamos com alguns dados que podem ser relacionados a gripe comum, e com isso realizamos a predição da quantidade de casos em um determinado estado e período. Além disso, as outras análises que foram feitas são visuais, exibindo dois gráficos que relacionam casos x período e voos x período, e os grafos de aeroportos e rotas. 
+>   O projeto final da disciplina de banco de dados consiste em encontrar diversas fontes de dados, relacionados à um tema da saúde, com formatos diferentes e assim trabalhar para que possam ser interligados. E após isso, realizar algum tipo de análise. No nosso caso, trabalhamos com alguns dados que podem ser relacionados a gripe comum, e com isso realizamos a predição da quantidade de casos em um determinado estado e período. Além disso, as outras análises que foram feitas são visuais, exibindo dois gráficos que relacionam casos x período e voos x período, e os grafos de aeroportos e rotas.
 
 ## Motivação e Contexto
+>   Escolhemos o tema da gripe para o projeto, por ser um assunto bem relevante na área da saúde e que pode se relacionar bem com diversos fatores. Assim é possível realizar uma proposta diversificada, além de facilitar a busca de dados de modelos variados. O vírus da gripe muda todo ano, sendo necessário desenvolvimento de vacinas para acompanhar o combate a doença. Assim, nossa motivação principal é a possibilidade de prever os casos de gripe esperados para determinado local e poder melhorar a profilaxia.
 
-> Descrição do tema do projeto, incluindo motivação e contexto gerador.
+--
+-- 
 
 ## Detalhamento do Projeto
 > Apresente aqui detalhes da análise. Nesta seção ou na seção de Resultados podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
@@ -48,14 +49,45 @@ plt.show();
 
 ## Modelos Lógicos Finais
 
-> Coloque aqui os modelos lógicos dos bancos de dados relacionados aos modelos conceituais. Todos os modelos lógicos da versão final devem estar presentes, mesmo que tenham sido apresentados em etapas anteriores. Para o modelo relacional, sugere-se o formato a seguir. Para outros modelos lógicos o formato é livre, pode ser adotado aqueles apresentados em sala.
+Modelo Relacional:
+~~~
+Estado(_UF_, Nome)
 
-> Exemplo de modelo lógico relacional
+Cidade(_Nome_, _Estado_)
+  Estado chave estrangeira -> Estado(UF)
+  
+Aeroporto(_Sigla_, Descricao, Cidade)
+  Cidade chave estrangeira -> Cidade(Nome)
+ 
+Periodo(_Id_,_Semana_,_Ano_)
+
+Rota(_Id_, Origem, Destino, VoosTotais)
+  Origem chave estrangeira -> Aeroporto(Sigla)
+  Destino chave estrangeira -> Aeroporto(Sigla)
+ 
+Voo(_Rota_, _Periodo_, Quantidade)
+  Rota chave estrangeira -> Rota(Id)
+  Periodo chave estrangeira -> Periodo(Id)
+  
+Casos(_Estado_, _Periodo_, NumCasos)
+  Estado chave estrangeira -> Estado(Nome)
+  Periodo chave estrangeira -> Periodo(Id)
 ~~~
-PESSOA(_Código_, Nome, Telefone)
-ARMÁRIO(_Código_, Tamanho, Ocupante)
-  Ocupante chave estrangeira -> PESSOA(Código)
+
+Modelo de Grafos (Criamos os nós e arestas do grafo, com as queries em cypher a seguir e em seguida temos uma pequena amostra do grafo):
+~~~ cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/aeroportoFINAL.csv' AS line
+CREATE (:aeroporto {cidade: line.Cidade , sigla: line.Sigla})
 ~~~
+
+~~~ cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/Desnord/ProjetoFinalMC536/main/stage04/data/processed/rota.csv' AS line
+MATCH (a1:aeroporto {sigla:line.Origem})
+MATCH (a2:aeroporto {sigla:line.Destino})
+CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
+~~~
+
+![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/aeroportosErotas.png)
 
 ## Programa de extração e conversão de dados atualizado
 
