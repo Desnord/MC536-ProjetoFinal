@@ -97,6 +97,8 @@ CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
 
 > queries SQL em notebook:
 
+>> https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/notebooks/queries.ipynb
+
 > queries em cypher:
 
 >> Aqui geramos o pagerank dos aeroportos com pesos (total de voos)
