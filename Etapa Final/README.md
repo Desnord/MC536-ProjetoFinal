@@ -84,7 +84,7 @@ Esse estágio serviu apenas para decidir o assunto a ser trabalhado, análises p
 Nessa etapa, escolhemos as duas fontes de dados que utilizamos em todo o projeto. De forma resumida, uma das fontes possuia os casos de gripe e a outra os dados de voos e cidades. Após escolher as fontes, iniciamos o processamento dos dados para interligá-los.
 
 ### Modelo Entidade Relacionamento
-![ER1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento1.png)
+![ER1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/entidadeRelacionamento1.png)
 
 ### Modelo Lógico
 ~~~
@@ -130,7 +130,7 @@ Para processar os dados, continuamos do final da etapa 3 e utilizamos scripts py
 
 ### Modelo Entidade Relacionamento
 O modelo entidade relacionamento foi revisado em conjunto com o modelo lógico, a fim de resolver os problemas encontrados com a tabela de voos:
-![ER2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/entidadeRelacionamento2.png)
+![ER2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/entidadeRelacionamento2.png)
 
 ### Modelo Lógico
 Aqui o modelo lógico final foi obtido, em que foram adicionados duas tabelas em comparação com o modelo da etapa 3, além de alterar as tabelas já existentes. Com esse modelo, foi possível reduzir a tabela de voos que tinha ~10 milhões de linhas, para apenas ~3500 linhas, perdendo apenas um pouco de informação.
