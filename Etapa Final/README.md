@@ -144,18 +144,37 @@ SET a.comunidade = communityId
 ~~~
 
 ## Bases de Dados
-> Elencar as bases de dados utilizadas no projeto. Apresente todas as bases usadas na versão final, mesmo aquelas que tenham sido apresentadas em etapas anteriores.
-
 título da base | link | breve descrição
 ----- | ----- | -----
-`<título da base>` | `<link para a página da base>` | `<breve descrição da base>`
+`voos no brasil` | https://www.anac.gov.br/assuntos/dados-e-estatisticas/historico-de-voos | `datasets com voos no brasil, por ano e mês`
+`infogripe*` | http://info.gripe.fiocruz.br | `sistema de casos de gripe no brasil`
 
 ## Arquivos de Dados
-> Elencar os arquivos usados no projeto que estão disponíveis no Github do projeto. Apresente todos os arquivos usados na versão final, mesmo aqueles que tenham sido apresentadas em etapas anteriores.
+
+> Arquivos Intermediários
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
-`<nome do arquivo>` | `<link para o arquivo>` | `<breve descrição do arquivo>`
+`aeroporto.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/aeroporto.csv | `Arquivo CSV de aeroportos obtido na etapa 3.`
+`cidade.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/cidade.csv | `Arquivo CSV de cidades obtido na etapa 3.`
+`01voosANO.csv` | https://drive.google.com/drive/folders/1W9NUGk94Ys2_5HG5TKvImnto6k3IUcuc?usp=sharing | `Drive com todos os CSVs de voos obtidos ao final da etapa 3, e que foram utilizados como base na etapa 4.`
+`casos_uf.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/external/casos_uf.csv | `Arquivo CSV de casos, obtido a partir da fonte original, encontrado em outro projeto no github.`
+`casos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/casos.csv | `Arquivo CSV de casos, obtido a partir do anterior, apos ser processado na etapa 3.`
 
-> Os arquivos devem ser colocados na pasta `data`, em subpasta conforme seu papel (externo, interim, processado, raw). A diferença entre externo e raw é que o raw é em formato não adaptado para uso. A pasta `raw` é opcional, pois pode ser substituída pelo link para a base original da seção anterior.
-> Coloque arquivos relacionais (usualmente CSV), XML ou JSON que não estejam disponíveis online e sejam acessados pelo notebook.
+> Arquivos Finais
+
+nome do arquivo | link | breve descrição
+----- | ----- | -----
+`aeroportoFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/aeroportoFINAL.csv | `csv final de aeroporto`
+`cidadeFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/cidadeFINAL.csv | `csv final de cidade`
+`casosFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/casosFINAL.csv | `csv final de casos`
+`periodo.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/periodo.csv | `csv de periodo`
+`estado.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/estado.csv | `csv de estado`
+`rotaFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/rota.csv | `csv final de rotas`
+`vooFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/voo.csv | `csv final de voos`
+`analise.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/analise.csv | `csv obtido em um select feito no notebook de queries`
+
+nome do arquivo | link | breve descrição
+----- | ----- | -----
+`pagerankAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/pagerankAeroportos.csv | `csv de pagerank dos aeroportos`
+`comunidadesAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/comunidadesAeroportos.csv | `csv de comunidades de aeroportos`
