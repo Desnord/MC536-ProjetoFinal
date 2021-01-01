@@ -95,8 +95,51 @@ CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
 
 ## Conjunto de queries para todos os modelos
 
-> Acrescente um link para o(s) arquivo(s) do(s) notebook(s) que executa(m) as queries para cada um dos modelos lógicos. Eles estarão dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas através de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
-> Apresente todas as suas queries em versão final, mesmo que tenham aparecido em etapas anteriores.
+> queries SQL em notebook:
+
+> queries em cypher:
+
+>> Aqui geramos o pagerank dos aeroportos com pesos (total de voos)
+gera grafo do pagerank
+~~~ cypher
+CALL gds.graph.create('prRotas','aeroporto','rota',{relationshipProperties: 'total'})
+~~~
+calcula e exibe pontuação para cada aeroporto
+~~~ cypher
+CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
+YIELD nodeId, score 
+RETURN gds.util.asNode(nodeId).sigla AS sigla, gds.util.asNode(nodeId).cidade AS cidade, score AS pontuacao
+ORDER BY pontuacao DESC
+~~~
+calcula e armazena pontuacao em cada aeroporto
+~~~ cypher
+CALL gds.pageRank.stream('prRotas',{relationshipWeightProperty: 'total'})
+YIELD nodeId, score
+MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
+SET a.prscore = score
+~~~
+
+>> Tabém geramos as comunidades dos aeroportos
+gera grafo das comunidades
+~~~ cypher
+CALL gds.graph.create('comunidade','aeroporto','rota')
+~~~
+
+obtem e exibe comunidades
+~~~ cypher
+CALL gds.louvain.stream('comunidade')
+YIELD nodeId, communityId
+RETURN gds.util.asNode(nodeId).sigla AS sigla, communityId
+ORDER BY sigla DESC
+~~~
+
+obtem comunidades e armazenas ids nos aeroportos
+~~~ cypher
+CALL gds.louvain.stream('comunidade')
+YIELD nodeId, communityId
+MATCH (a:aeroporto {sigla: gds.util.asNode(nodeId).sigla})
+SET a.comunidade = communityId
+~~~
 
 ## Bases de Dados
 > Elencar as bases de dados utilizadas no projeto. Apresente todas as bases usadas na versão final, mesmo aquelas que tenham sido apresentadas em etapas anteriores.
