@@ -137,6 +137,7 @@ Aqui o modelo lógico final foi obtido, em que foram adicionados duas tabelas em
 
 ## Resultados e Discussão
 
+Os resultados podem ser utilizados para se tirar conclusões a respeito da gripe, dado que as cidades com mais voos são cidades mais importantes e consequentemente terão mais casos registrados. Porém acreditamos que os fatores levados em consideração ainda são poucos e muito simples para serem utilizados como ferramenta prática de profilaxia. Assim, seriam necessários considerar mais dados (como clima, estatísticas de turismo, voos estrangeiros, rotas de outros tipos de transportes, campanhas de prevenção, etc) e realizar um estudo mais profundo. 
 Temos os resultados das análises finais representados nas imagens à seguir:
 
 Gráfico 1: Casos x Período </br>
@@ -162,17 +163,12 @@ Imagem com todo o grafo: </br>
 Imagem com uma pequena parte do grafo: </br>
 ![PCT2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity2.png) </br>
 
-> A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?
-
 ## Conclusões
     De modo geral, conseguimos direcionar o projeto da forma que gostariamos, apesar dos problemas encontrados. Assim, arrumamos todos os problemas encontrados, e realizamos as análises desejadas desde o começo do projeto de forma satisfatória dentre os objetivos da disciplina. Na questão de aprendizado, diversos fatores podem ser levados em conta:
  - utilizamos diversas tecnlogias e conhecimentos no projeto (SQL, neo4j, jupiter, colab, javascript, html, markdown, python, etc)
  - utilizamos modelos de dados diversos (arquivos com csv's, relacional com sql, e grafos com cypher)
  - iniciar um projeto do zero, de forma praticamente livre (foi um desafio, pois não havia um ponto de partida para as análises e tivemos de usar de criatividade para tal)
  - processar dados diversos e interligá-los, apesar de que estes não possuiam nenhuma relação (aprendemos a lidar melhor com a criação de integrações)
-
-
-> Apresente aqui as conclusões finais do trabalho e as lições aprendidas.
 
 ## Modelo Conceitual Final
 
