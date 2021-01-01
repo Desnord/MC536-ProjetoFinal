@@ -1,6 +1,6 @@
 # Etapa Final
 
-## Projeto `Análise de dados relacionados à gripe comum`
+## Projeto - `Análise de dados relacionados à gripe comum`
 
 ## Equipe `Glicemia`
 * `Thomas Gomes Ferreira - 224919`
@@ -41,7 +41,6 @@ plt.show();
 
 ## Modelo Conceitual Final
 
-> Coloque aqui a imagem do modelo conceitual final em ER ou UML, como o exemplo a seguir:
 > ![ER Taxi](images/er-taxi.png)
 
 ## Modelos Lógicos Finais
@@ -87,8 +86,11 @@ CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
 ![AR1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/aeroportosErotas.png)
 
 ## Programa de extração e conversão de dados atualizado
-
-> Coloque um link para o arquivo do notebook que executa a extração e conversão de dados. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se a extração e conversão envolverem queries executadas através de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
+>   Os scripts python utilizados para conversão dos dados se encontra na pasta src: https://github.com/Desnord/ProjetoFinalMC536/tree/main/Etapa%20Final/src
+>   Além disso, foram geradas duas tabelas extras, uma proveniente das queries em SQL, e outra das queries em Cypher.
+~~~python
+ 
+~~~
 
 ## Conjunto de queries para todos os modelos
 
@@ -157,26 +159,26 @@ external. </br>
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
-`aeroporto.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/aeroporto.csv | `Arquivo CSV de aeroportos obtido na etapa 3.`
-`cidade.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/cidade.csv | `Arquivo CSV de cidades obtido na etapa 3.`
+`aeroporto.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/interim/aeroporto.csv | `Arquivo CSV de aeroportos obtido na etapa 3.`
+`cidade.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/interim/cidade.csv | `Arquivo CSV de cidades obtido na etapa 3.`
 `01voosANO.csv` | https://drive.google.com/drive/folders/1W9NUGk94Ys2_5HG5TKvImnto6k3IUcuc?usp=sharing | `Drive com todos os CSVs de voos obtidos ao final da etapa 3, e que foram utilizados como base na etapa 4.`
-`casos_uf.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/external/casos_uf.csv | `Arquivo CSV de casos, obtido a partir da fonte original, encontrado em outro projeto no github.`
-`casos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/interim/casos.csv | `Arquivo CSV de casos, obtido a partir do anterior, apos ser processado na etapa 3.`
+`casos_uf.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/external/casos_uf.csv | `Arquivo CSV de casos, obtido a partir da fonte original, encontrado em outro projeto no github.`
+`casos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/interim/casos.csv | `Arquivo CSV de casos, obtido a partir do anterior, apos ser processado na etapa 3.`
 
 > Arquivos Finais
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
-`aeroportoFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/aeroportoFINAL.csv | `csv final de aeroporto`
-`cidadeFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/cidadeFINAL.csv | `csv final de cidade`
-`casosFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/casosFINAL.csv | `csv final de casos`
-`periodo.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/periodo.csv | `csv de periodo`
-`estado.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/estado.csv | `csv de estado`
-`rotaFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/rota.csv | `csv final de rotas`
-`vooFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/voo.csv | `csv final de voos`
-`analise.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/analise.csv | `csv obtido em um select feito no notebook de queries`
+`aeroportoFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/aeroportoFINAL.csv | `csv final de aeroporto`
+`cidadeFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/cidadeFINAL.csv | `csv final de cidade`
+`casosFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/casosFINAL.csv | `csv final de casos`
+`periodo.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/periodo.csv | `csv de periodo`
+`estado.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/estado.csv | `csv de estado`
+`rotaFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/rota.csv | `csv final de rotas`
+`vooFINAL.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/voo.csv | `csv final de voos`
+`analise.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/analise.csv | `csv obtido em um select feito no notebook de queries`
 
 nome do arquivo | link | breve descrição
 ----- | ----- | -----
-`pagerankAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/pagerankAeroportos.csv | `csv de pagerank dos aeroportos`
-`comunidadesAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/data/processed/comunidadesAeroportos.csv | `csv de comunidades de aeroportos`
+`pagerankAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/pagerankAeroportos.csv | `csv de pagerank dos aeroportos`
+`comunidadesAeroportos.csv` | https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/data/processed/comunidadesAeroportos.csv | `csv de comunidades de aeroportos`
