@@ -137,12 +137,40 @@ Aqui o modelo lógico final foi obtido, em que foram adicionados duas tabelas em
 
 ## Resultados e Discussão
 
-> Apresente os resultados da forma mais rica possível, com gráficos e tabelas. Mesmo que o seu código rode online em um notebook, copie para esta parte a figura estática. A referência a código e links para execução online pode ser feita aqui ou na seção de detalhamento do projeto (o que for mais pertinente).
+Temos os resultados das análises finais representados nas imagens à seguir:
+
+Gráfico 1: Casos x Período </br>
+![G1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico1.png)
+
+Gráfico 2: Voos x Período </br>
+![G2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/grafico2.png)
+
+Em seguida, temos a predição dos casos, que utilizou apenas o csv de analise. Com o modelo de regressão DecisionTreeRegressor do sklearn (ML), treinamos os dados de análise para realizar a predição dos casos em determinados período e estado. Obtemos uma confiabilidade de aproximadamente 92% com esse modelo, ou seja, o erro é bem pequeno ao prever casos e dado as limitações do trabalho, o resultado é bem satisfatório. Para realizar uma predição, fornecemos como entrada: um período (ano e semana), estado e quantidade de voo. Depois, atráves do modelo treinado, é feita a predição da quantidade de casos aproximados para a gripe comum. 
+
+Exemplo para predição: </br>
+![PRED](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/predicao.png)
+
+Como resultado das análises em cypher (pagerank e community), obtivemos o seguinte grafo, com todos os aeroportos e rotas representados. A primeira imagem contém todo o grafo, com todos os aeroportos e rotas sendo representados na figura. Como o grafo é muito grande, colocamos uma segunda imagem com apenas uma amostra do grafo, em que podemos ver com clareza o resultado das análises feitas. Além disso, essas imagens foram obtidas com o neovis.js, uma biblioteca do javascript que pode ser facilmente interligada ao neo4j para obter imagens de grafos.
+Nas imagens temos:
+as comunidades representadas por cores;
+a espessura das arestas de acordo com a quantidade de voos realizados naquela rota (quanto maior, mais voos foram feitos);
+o tamanho dos nós de acordo com a relevância do aeroporto, obtido com o cálculo do pagerank (quanto maior o nó, maior a relevância do aeroporto);
+</br>
+Imagem com todo o grafo: </br>
+![PCT1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity.png) </br>
+
+Imagem com uma pequena parte do grafo: </br>
+![PCT2](https://github.com/Desnord/ProjetoFinalMC536/blob/main/stage04/assets/pagerankcommunity2.png) </br>
+
 > A discussão dos resultados também pode ser feita aqui na medida em que os resultados são apresentados ou em seção independente. Aspectos importantes a serem discutidos: É possível tirar conclusões dos resultados? Quais? Há indicações de direções para estudo? São necessários trabalhos mais profundos?
 
 ## Conclusões
-  De modo geral, conseguimos direcionar o projeto da forma que gostariamos, apesar dos problemas encontrados. Para a etapa 4, continuamos o que foi feito na etapa 3, complementando e adicionando o que fosse necessário. Assim, arrumamos os problemas encontrados, e realizamos as análises desejadas desde o começo do projeto, com sucesso. 
-![ER Final](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/.png)
+    De modo geral, conseguimos direcionar o projeto da forma que gostariamos, apesar dos problemas encontrados. Assim, arrumamos todos os problemas encontrados, e realizamos as análises desejadas desde o começo do projeto de forma satisfatória dentre os objetivos da disciplina. Na questão de aprendizado, diversos fatores podem ser levados em conta:
+ - utilizamos diversas tecnlogias e conhecimentos no projeto (SQL, neo4j, jupiter, colab, javascript, html, markdown, python, etc)
+ - utilizamos modelos de dados diversos (arquivos com csv's, relacional com sql, e grafos com cypher)
+ - iniciar um projeto do zero, de forma praticamente livre (foi um desafio, pois não havia um ponto de partida para as análises e tivemos de usar de criatividade para tal)
+ - processar dados diversos e interligá-los, apesar de que estes não possuiam nenhuma relação (aprendemos a lidar melhor com a criação de integrações)
+
 
 > Apresente aqui as conclusões finais do trabalho e as lições aprendidas.
 
@@ -195,9 +223,6 @@ CREATE (a1)-[r:rota {total: toInt(line.VoosTotais)}]->(a2)
 ## Programa de extração e conversão de dados atualizado
 >   Os scripts python utilizados para conversão dos dados se encontra na pasta src: https://github.com/Desnord/ProjetoFinalMC536/tree/main/Etapa%20Final/src
 >   Além disso, foram geradas duas tabelas extras, uma proveniente das queries em SQL, e outra das queries em Cypher.
-~~~python
- 
-~~~
 
 ## Conjunto de queries para todos os modelos
 
