@@ -81,7 +81,7 @@ Esse estágio serviu apenas para decidir o assunto a ser trabalhado, análises p
 </br>
 </br>
 <div align="center"><h2> Stage03</h2></div>
-Nessa etapa, escolhemos as duas fontes de dados que utilizamos em todo o projeto. De forma resumida, uma das fontes possuia os casos de gripe e a outra os dados de voos e cidades. Após escolher as fontes, iniciamos o processamento dos dados para interligá-los.
+Nessa etapa, escolhemos as duas fontes de dados que utilizamos em todo o projeto. De forma resumida, uma das fontes possuia os casos de gripe e a outra os dados de voos e cidades. Após escolher as fontes, iniciamos o processamento dos dados para interligá-los. Além disso, foi nessa etapa do projeto que forom feitos os primeiros modelos entidade relacionamento e lógico do projeto, que podem ser observados abaixo.
 
 ### Modelo Entidade Relacionamento
 ![ER1](https://github.com/Desnord/ProjetoFinalMC536/blob/main/Etapa%20Final/assets/entidadeRelacionamento1.png)
