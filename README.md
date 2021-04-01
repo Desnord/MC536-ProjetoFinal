@@ -1,4 +1,4 @@
-<div align="center"><h1> Projeto final da disciplina de Banco de Dados </h1></div>
+<div align="center"><h1> Projeto final da disciplina de Banco de Dados (MC536)</h1></div>
 <div align="center"><h3> Grupo: Glicemia</h3></div>
 <div align="center"> Thomas Gomes Ferreira - 224919 </div>
 <div align="center"> Pedro Jun Novais - 204878 </div>
